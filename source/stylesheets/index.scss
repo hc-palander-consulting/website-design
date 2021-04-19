@@ -931,6 +931,7 @@ html {
         /* Positioning */
         /* Display and Box model */
         align-items: center;
+        border: $border-width solid $black-20;
         box-sizing: content-box;
         display: grid;
         grid-template-areas:
@@ -954,6 +955,7 @@ html {
           /* Positioning */
           /* Display and Box model */
           grid-area: picture;
+          line-height: 0;
           /* Typography */
           /* Other */
 
@@ -961,7 +963,6 @@ html {
             /* Positioning */
             /* Display and Box model */
             height: 18.75rem;
-            line-height: 0;
             object-fit: cover;
             width: 100%;
             /* Typography */
