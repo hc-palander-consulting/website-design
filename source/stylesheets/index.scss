@@ -1102,8 +1102,95 @@ html {
     /* Positioning */
     /* Display and Box model */
     grid-area: contact;
+    padding-bottom: $column-width;
     /* Typography */
     /* Other */
+
+    .body {
+      /* Positioning */
+      /* Display and Box model */
+      justify-content: center;
+      display: grid;
+      grid-gap: $gap-width;
+      grid-template-columns: repeat(auto-fit, minmax(calc(#{$column-width} * 2 + calc(#{$gap-width} * 1)), calc(#{$column-width} * 3 + calc(#{$gap-width} * 2))));
+      width: 100%;
+      /* Typography */
+      /* Other */
+
+
+      figure.contact {
+        /* Positioning */
+        /* Display and Box model */
+        background-color: $black-10;
+        border: $black-20 solid $border-width;
+        display: grid;
+        grid-template-areas:
+        "icon"
+        "caption"
+        "text";
+        grid-template-columns:
+          [first] auto;
+        grid-template-rows:
+          [icon] 3.5rem
+          [caption] auto
+          [text] 1fr;
+        padding: $gap-width;
+        /* Typography */
+        /* Other */
+
+
+        .icon {
+          /* Positioning */
+          /* Display and Box model */
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+          grid-area: icon;
+          /* Typography */
+          color: $black-50;
+          font-size: 3.5rem;
+          line-height: 0;
+          /* Other */
+        }
+
+        figcaption.caption {
+           /* Positioning */
+          /* Display and Box model */
+          grid-area: caption;
+          min-height: calc(1.777rem * 1.3 + 3rem + 1.38rem); /* font size * line height + top margin + bottom margin */
+          /* Typography */
+          /* Other */
+
+          .title {
+
+            h4 {
+              /* Positioning */
+              /* Display and Box model */
+              /* Typography */
+              text-align: center;
+              /* Other */
+            }
+          }
+        }
+
+        .text {
+          /* Positioning */
+          /* Display and Box model */
+          grid-area: text;
+          /* Typography */
+          /* Other */
+
+          p {
+            /* Positioning */
+            /* Display and Box model */
+            margin: 0;
+            /* Typography */
+            text-align: center;
+            /* Other */
+          }
+        }
+      }
+    }
   }
 }
 
