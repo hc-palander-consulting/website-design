@@ -1307,21 +1307,71 @@ html {
         /* Typography */
         /* Other */
 
+        &:first-child {
+
+          .label {
+            /* Positioning */
+            /* Display and Box model */
+            border-width: $border-width 0 $border-width $border-width;
+            padding: calc(1rem * 1.75 / 2 - #{$border-width});
+            /* Typography */
+            /* Other */
+          }
+
+          .info {
+            /* Positioning */
+            /* Display and Box model */
+            border-width: $border-width;
+            padding: calc(1rem * 1.75 / 2 - #{$border-width});
+            /* Typography */
+            /* Other */
+          }
+        }
+
+        &:last-child {
+
+          .label {
+            /* Positioning */
+            /* Display and Box model */
+            border-width: 0 0 $border-width $border-width;
+            padding: calc(1rem * 1.75 / 2 - calc(#{$border-width} / 2));
+            /* Typography */
+            /* Other */
+          }
+
+          .info {
+            /* Positioning */
+            /* Display and Box model */
+            border-width: 0 $border-width $border-width $border-width;
+            padding: calc(1rem * 1.75 / 2 - calc(#{$border-width} / 2));
+            /* Typography */
+            /* Other */
+          }
+        }
+
         .label {
-          background: $white-10;
-          border: $border-width solid $white-20;
+          /* Positioning */
+          /* Display and Box model */
+          background-color: $white-10;
+          border-color: $white-20;
+          border-style: solid;
+          min-width: $column-width;
+          /* Typography */
+          font-weight: 700;
+          /* Other */
         }
 
         .info {
-          border: $border-width solid $white-20;
+          /* Positioning */
+          /* Display and Box model */
+          border-color: $white-20;
+          border-style: solid;
+          width: 100%;
+          /* Typography */
+          /* Other */
         }
       }
     }
-
-  }
-
-  #nav-links {
-
   }
 
   #certifications {
