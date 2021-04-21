@@ -1124,12 +1124,12 @@ html {
     /* Other */
   }
 
-  ul {
-
-  }
-
   p {
-
+    /* Positioning */
+    /* Display and Box model */
+    /* Typography */
+    color: $white-50;
+    /* Other */
   }
 
   .content {
@@ -1138,10 +1138,13 @@ html {
     &.top {
 
       .header {
+
         .heading{
-          h4 {
-            margin: 0;
-          }
+          /* Positioning */
+          /* Display and Box model */
+          border-bottom: $border-width solid $white-20;
+          /* Typography */
+          /* Other */
         }
       }
 
@@ -1154,18 +1157,41 @@ html {
         width: 100%;
         /* Typography */
         /* Other */
-        .title {
 
+        a.link {
+          /* Positioning */
+          /* Display and Box model */
+          /* Typography */
+          color: $white-50;
+          /* Other */
+
+          &:hover {
+            /* Positioning */
+            /* Display and Box model */
+            /* Typography */
+            color: $white-100;
+            /* Other */
+            cursor: pointer;
+          }
         }
 
         ul.list {
+          /* Positioning */
+          /* Display and Box model */
+          /* Typography */
+          color: $white-50;
           list-style-type: none;
+          /* Other */
         }
       }
     }
 
     &.bottom {
+      /* Positioning */
+      /* Display and Box model */
       background-color: $black-80;
+      /* Typography */
+      /* Other */
     }
 
   }
@@ -1173,18 +1199,113 @@ html {
 
   #company-info {
 
+    ul.list {
+
+      li {
+        /* Positioning */
+        /* Display and Box model */
+        display: flex;
+        flex-direction: row;
+        /* Typography */
+        /* Other */
+
+        .label {
+          background: $white-10;
+          border: $border-width solid $white-20;
+        }
+
+        .info {
+          border: $border-width solid $white-20;
+        }
+      }
+    }
+
   }
 
   #nav-links {
 
   }
 
-  #partners {
+  #certifications {
 
+    ul.list {
+      /* Positioning */
+      /* Display and Box model */
+      display: grid;
+      grid-gap: $gap-width;
+      grid-template-columns: repeat(auto-fit, 1fr);
+      /* Typography */
+      /* Other */
+
+      li {
+
+        a.link {
+          /* Positioning */
+          /* Display and Box model */
+          display: inline-block;
+          /* Typography */
+          line-height: 1;
+          /* Other */
+
+          .picture {
+            /* Positioning */
+            /* Display and Box model */
+            background: $white-10;
+            border: $border-width solid $white-20;
+            padding: calc(#{$gap-width} * 2);
+            min-width: calc(#{$column-width} * 2 + #{$gap-width});
+            max-width: calc(#{$column-width} * 2);
+            /* Typography */
+            /* Other */
+
+            .image {
+              /* Positioning */
+              /* Display and Box model */
+              height: auto;
+              width: 100%;
+              /* Typography */
+              /* Other */
+            }
+          }
+        }
+      }
+    }
   }
 
   #social {
 
+    ul.list {
+      /* Positioning */
+      /* Display and Box model */
+      display: grid;
+      grid-gap: $gap-width;
+      grid-template-columns: repeat(auto-fit, calc(#{$column-width} / 4));
+      /* Typography */
+      /* Other */
+
+      li {
+        /* Positioning */
+        /* Display and Box model */
+        display: flex;
+        /* make inline-block to have control over height */
+        /* Typography */
+        height: 1.75rem;
+        /* Other */
+      }
+
+      span.icon {
+        /* Positioning */
+        /* Display and Box model */
+        align-items: center;
+        display: flex; /* make inline-block to have control over height */
+        flex-direction: column;
+        width: 1.75rem;
+        /* Typography */
+        font-size: 1.75rem;
+        line-height: 0;
+        /* Other */
+      }
+    }
   }
 }
 
