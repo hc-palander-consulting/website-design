@@ -1282,6 +1282,14 @@ html {
       background-color: $black-80;
       /* Typography */
       /* Other */
+
+      .text {
+
+        p {
+          margin-bottom: 0;
+          text-align: center;
+        }
+      }
     }
 
   }
