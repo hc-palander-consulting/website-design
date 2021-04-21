@@ -734,7 +734,7 @@ html {
       flex-direction: row;
       height: 100%;
       justify-content: center;
-      margin: 0;
+      margin: 0 calc(#{$column-width} * -1);
       /* Typography */
       text-align: center;
       /* Other */
