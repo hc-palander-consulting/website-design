@@ -1395,6 +1395,17 @@ html {
           line-height: 1;
           /* Other */
 
+          &:hover {
+
+            .picture {
+              /* Positioning */
+              /* Display and Box model */
+              border-color: $white-100;
+              /* Typography */
+              /* Other */
+            }
+          }
+
           .picture {
             /* Positioning */
             /* Display and Box model */
