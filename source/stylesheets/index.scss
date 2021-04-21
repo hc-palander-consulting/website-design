@@ -1017,7 +1017,7 @@ html {
           /* Display and Box model */
           border-bottom: $border-width solid $black-20;
           grid-area: caption;
-          height: auto;
+          min-height: calc(#{$gap-width} * 2 + calc(2.369rem * 1.3) + calc(1.777rem * 1.3) + #{$border-width}); /* padding (top + bottom) + h4 line height + h3 line height + border (bottom) */
           padding: $gap-width;
           /* Typography */
           /* Other */
