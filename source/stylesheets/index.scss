@@ -1219,7 +1219,11 @@ html {
   }
 
   .content {
+    /* Positioning */
+    /* Display and Box model */
     padding: $gap-width $column-width;
+    /* Typography */
+    /* Other */
 
     &.top {
 
