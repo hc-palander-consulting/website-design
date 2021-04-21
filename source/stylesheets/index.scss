@@ -256,7 +256,7 @@ html {
       .logomark {
         /* Positioning */
         /* Display and Box model */
-        margin-right: calc(#{$gap-width}/2);
+        margin-right: calc(#{$gap-width} / 2);
         /* Typography */
         /* Other */
       }
@@ -264,7 +264,7 @@ html {
       .logotype {
         /* Positioning */
         /* Display and Box model */
-        margin-top: calc(#{$gap-width}/2);
+        margin-top: calc(#{$gap-width} / 4);
         /* Typography */
         font-family: Courier;
         /* Other */
