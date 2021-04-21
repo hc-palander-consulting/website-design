@@ -16,19 +16,23 @@
 $black-100: rgba(0 ,0 ,0, 1);
 $white-100: rgba(255, 255, 255, 1);
 
-/* Secondary Colors */
+/* Blacks*/
 $black-0: rgba(0, 0, 0, 0);
 $black-10: rgba(0, 0, 0, 0.1);
 $black-20: rgba(0, 0, 0, 0.2);
-$black-30: rgba(0, 0, 0, 0.3);
+$black-40: rgba(0, 0, 0, 0.4);
 $black-50: rgba(0, 0, 0, 0.5);
 $black-60: rgba(0, 0, 0, 0.6);
+$black-70: rgba(0, 0, 0, 0.7);
 $black-80: rgba(0, 0, 0, 0.8);
+
+/* Whites */
 $white-10: rgba(255, 255, 255, 0.1);
 $white-20: rgba(255, 255, 255, 0.2);
 $white-40: rgba(255, 255, 255, 0.4);
 $white-50: rgba(255, 255, 255, 0.5);
 $white-60: rgba(255, 255, 255, 0.6);
+$white-70: rgba(255, 255, 255, 0.7);
 $white-80: rgba(255, 255, 255, 0.8);
 
 /* Accent Colors */
@@ -450,7 +454,7 @@ html {
         .heading {
           /* Positioning */
           /* Display and Box model */
-          border-color: $black-50;
+          border-color: $black-40;
           border-style: solid;
           border-width: $border-width;
           height:  $header-height;
@@ -466,6 +470,20 @@ html {
             text-transform: uppercase;
             /* Other */
             line-height: $header-height;
+          }
+        }
+      }
+
+      .body {
+
+        .text {
+
+          p {
+            /* Positioning */
+            /* Display and Box model */
+            /* Typography */
+            color: $black-70;
+            /* Other */
           }
         }
       }
@@ -516,7 +534,7 @@ html {
       }
     }
 
-    /* Article Color Variations */
+    /* Article Color Variations - a white section is default */
     &.black {
       /* Positioning */
       /* Display and Box model */
@@ -539,7 +557,7 @@ html {
           .heading {
             /* Positioning */
             /* Display and Box model */
-            border-color: $white-50;
+            border-color: $white-40;
             /* Typography */
             /* Other */
           }
@@ -553,8 +571,21 @@ html {
               /* Positioning */
               /* Display and Box model */
               /* Typography */
-              color: $white-80;
+              color: $white-70;
               /* Other */
+            }
+          }
+        }
+      }
+
+      section.footer {
+
+        .link {
+
+          .icon {
+
+            .image {
+              filter: $light-gray;
             }
           }
         }
@@ -597,7 +628,7 @@ html {
               /* Positioning */
               /* Display and Box model */
               /* Typography */
-              color: $white-80;
+              color: $white-70;
               /* Other */
             }
           }
@@ -627,6 +658,17 @@ html {
 
       section.content {
 
+        .header {
+
+          .heading {
+            /* Positioning */
+            /* Display and Box model */
+            border-color: $black-50;
+            /* Typography */
+            /* Other */
+          }
+        }
+
         .body {
 
           .text {
@@ -635,33 +677,33 @@ html {
               /* Positioning */
               /* Display and Box model */
               /* Typography */
-              color: $black-80;
+              color: $black-70;
               /* Other */
             }
           }
         }
       }
-    }
 
-    &.white {
-      /* Positioning */
-      /* Display and Box model */
-      background: $white-100;
-      /* Typography */
-      /* Other */
+      section.footer {
 
-      section.content {
+        a.link {
 
-        .body {
+          .icon {
 
-          .text {
-
-            p {
+            img.image {
               /* Positioning */
               /* Display and Box model */
+              opacity: 0.3;
               /* Typography */
-              color: $black-80;
               /* Other */
+            }
+          }
+
+          &:hover {
+            .icon {
+              .image {
+                opacity: 1;
+              }
             }
           }
         }
