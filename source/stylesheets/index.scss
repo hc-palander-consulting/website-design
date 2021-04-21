@@ -1073,7 +1073,7 @@ html {
           /* Display and Box model */
           width: 100%;
           border: $border-width solid $black-20;
-          padding: calc(#{$gap-width}/2) calc(#{$gap-width}/2) 0.5625rem;
+          padding: calc(#{$gap-width} / 2) calc(#{$gap-width} / 2) 0.5625rem;
           /* Typography */
           font-family: $font-family-monospace;
           font-size: 0.8125rem;
