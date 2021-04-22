@@ -1104,7 +1104,7 @@ html {
       justify-content: center;
       display: grid;
       grid-gap: $gap-width;
-      grid-template-columns: repeat(auto-fit, minmax(calc(#{$column-width} * 2 + calc(#{$gap-width} * 1)), calc(#{$column-width} * 3 + calc(#{$gap-width} * 2))));
+      grid-template-columns: repeat(auto-fit, minmax(auto, calc(#{$column-width} * 3 + calc(#{$gap-width} * 2))));
       width: 100%;
       /* Typography */
       /* Other */
