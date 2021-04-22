@@ -175,6 +175,7 @@ html {
     justify-items: center;
     height: $header-height;
     padding: $gap-width $column-width;
+    width: 100%;
     /* Typography */
     /* Other */
   }
@@ -221,15 +222,6 @@ html {
     grid-template-rows:
       [top-content] auto
       [bottom-content] auto;
-    /* Typography */
-    /* Other */
-  }
-
-  .item {
-    /* Positioning */
-    /* Display and Box model */
-    box-sizing: border-box;
-    width: 100%;
     /* Typography */
     /* Other */
   }
