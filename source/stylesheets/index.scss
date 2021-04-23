@@ -768,86 +768,90 @@ html {
     /* Typography */
     /* Other */
 
-    .body {
-      /* Positioning */
-      /* Display and Box model */
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(calc(#{$column-width} * 3 + calc(#{$gap-width} * 2)), 1fr));
-      grid-gap: $gap-width;
-      width: 100%;
-      /* Typography */
-      /* Other */
+    section.content {
 
-      figure.service {
+      .body {
         /* Positioning */
         /* Display and Box model */
-        align-items: center;
-        background: $white-50;
-        border: $border-width solid $black-20;
-        box-sizing: content-box;
-        display: flex;
-        flex-direction: column;
-        margin: 0;
-        padding: $gap-width;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(calc(#{$column-width} * 3 + calc(#{$gap-width} * 2)), 1fr));
+        grid-gap: $gap-width;
+        width: 100%;
         /* Typography */
         /* Other */
 
-        figcaption.caption {
+        figure.service {
           /* Positioning */
           /* Display and Box model */
+          align-items: center;
+          background: $white-50;
+          border: $border-width solid $black-20;
+          box-sizing: content-box;
+          display: flex;
+          flex-direction: column;
+          height: auto;
+          margin: 0;
+          padding: $gap-width;
           /* Typography */
           /* Other */
 
-          .title {
+          figcaption.caption {
             /* Positioning */
             /* Display and Box model */
-            width: auto;
             /* Typography */
-            text-align: center;
             /* Other */
 
-            h6 {
+            .title {
+              /* Positioning */
+              /* Display and Box model */
+              width: auto;
+              /* Typography */
+              text-align: center;
+              /* Other */
+
+              h6 {
+                /* Positioning */
+                /* Display and Box model */
+                margin: 0;
+                /* Typography */
+                text-transform: none;
+                /* Other */
+              }
+            }
+
+            .description {
               /* Positioning */
               /* Display and Box model */
               margin: 0;
               /* Typography */
-              text-transform: none;
+              color: $black-100;
+              text-align: center;
               /* Other */
             }
           }
 
-          .description {
+          .icon {
             /* Positioning */
             /* Display and Box model */
-            margin: 0;
-            /* Typography */
-            color: $black-100;
-            text-align: center;
-            /* Other */
-          }
-        }
-
-        .icon {
-          /* Positioning */
-          /* Display and Box model */
-          align-items: center;
-          border-bottom: $border-width solid $black-20;
-          box-sizing: border-box;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          padding-bottom: calc(#{$gap-width} / 2);
-          margin-bottom: $gap-width;
-          /* Typography */
-          /* Other */
-
-          img.image {
-            /* Positioning */
-            /* Display and Box model */
-            opacity: 0.5;
-            width: 2rem;
+            align-items: center;
+            border-bottom: $border-width solid $black-20;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-bottom: calc(#{$gap-width} / 2);
+            margin-bottom: $gap-width;
             /* Typography */
             /* Other */
+
+            img.image {
+              /* Positioning */
+              /* Display and Box model */
+              opacity: 0.5;
+              width: 2rem;
+              /* Typography */
+              /* Other */
+            }
           }
         }
       }
