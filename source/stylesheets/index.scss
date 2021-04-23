@@ -1279,7 +1279,14 @@ html {
         /* Positioning */
         /* Display and Box model */
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(calc(#{$column-width} * 2 + #{$gap-width}), 1fr));
+        grid-template-columns:
+          repeat(
+            auto-fit,
+            minmax(
+              calc(#{$column-width} * 3 + calc(#{$gap-width} * 2)),
+              1fr
+            )
+          );
         grid-gap: $gap-width;
         width: 100%;
         /* Typography */
@@ -1402,7 +1409,7 @@ html {
           /* Display and Box model */
           border-color: $white-20;
           border-style: solid;
-          width: 100%;
+          min-width: calc(#{$column-width} + #{$gap-width});
           /* Typography */
           /* Other */
         }
@@ -1417,7 +1424,11 @@ html {
       /* Display and Box model */
       display: grid;
       grid-gap: $gap-width;
-      grid-template-columns: repeat(auto-fit, 1fr);
+      grid-template-columns:
+        repeat(
+          auto-fit,
+          calc(#{$column-width} * 2 + #{$gap-width})
+        );
       /* Typography */
       /* Other */
 
@@ -1445,11 +1456,9 @@ html {
           .picture {
             /* Positioning */
             /* Display and Box model */
-            background: $white-10;
             border: $border-width solid $white-20;
-            min-width: calc(#{$column-width} * 2 + #{$gap-width});
-            max-width: calc(#{$column-width} * 2);
             padding: calc(#{$gap-width} * 2);
+            width: calc(#{$column-width} * 2);
             /* Typography */
             /* Other */
 
