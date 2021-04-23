@@ -231,7 +231,6 @@ html {
 /* ELEMENTS            */
 /*=====================*/
 #header {
-  grid-area: navigation;
 
   #logo {
     /* Positioning */
@@ -407,11 +406,6 @@ html {
 
 /* MAIN */
 #main {
-  /* Positioning */
-  /* Display and Box model */
-  grid-area: main;
-  /* Typography */
-  /* Other */
 
   article.article {
     /* Positioning */
