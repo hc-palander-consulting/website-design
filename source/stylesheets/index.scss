@@ -1403,9 +1403,9 @@ html {
             /* Display and Box model */
             background: $white-10;
             border: $border-width solid $white-20;
-            padding: calc(#{$gap-width} * 2);
             min-width: calc(#{$column-width} * 2 + #{$gap-width});
             max-width: calc(#{$column-width} * 2);
+            padding: calc(#{$gap-width} * 2);
             /* Typography */
             /* Other */
 
