@@ -307,7 +307,11 @@ html {
     display: grid;
     grid-area: navigation;
     grid-gap: $gap-width;
-    grid-template-columns: repeat(auto-fit, $column-width);
+    grid-template-columns:
+      repeat(
+        auto-fit,
+        $column-width
+      );
     grid-template-rows:
       [first] auto;
     justify-content: end;
@@ -778,7 +782,14 @@ html {
         /* Positioning */
         /* Display and Box model */
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(calc(#{$column-width} * 3 + calc(#{$gap-width} * 2)), 1fr));
+        grid-template-columns:
+          repeat(
+            auto-fill,
+            minmax(
+              calc(#{$column-width} * 3 + calc(#{$gap-width} * 2)),
+              1fr
+            )
+          );
         grid-gap: $gap-width;
         width: 100%;
         /* Typography */
@@ -869,15 +880,23 @@ html {
     /* Typography */
     /* Other */
 
-    .body {
-      /* Positioning */
-      /* Display and Box model */
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(calc(#{$column-width} * 5 + calc(#{$gap-width} * 4)), 1fr));
-      grid-gap: $gap-width;
-      width: auto;
-      /* Typography */
-      /* Other */
+
+      .body {
+        /* Positioning */
+        /* Display and Box model */
+        display: grid;
+        grid-template-columns:
+          repeat(
+            auto-fit,
+            minmax(
+              calc(#{$column-width} * 5 + calc(#{$gap-width} * 4)),
+              1fr
+            )
+          );
+        grid-gap: $gap-width;
+        width: auto;
+        /* Typography */
+        /* Other */
 
       figure.bio {
         /* Positioning */
@@ -960,15 +979,23 @@ html {
     /* Typography */
     /* Other */
 
-    .body {
-      /* Positioning */
-      /* Display and Box model */
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(calc(#{$column-width} * 3 + calc(#{$gap-width} * 2)), 1fr));
-      grid-gap: $gap-width;
-      width: 100%;
-      /* Typography */
-      /* Other */
+
+      .body {
+        /* Positioning */
+        /* Display and Box model */
+        display: grid;
+        grid-template-columns:
+          repeat(
+            auto-fill,
+            minmax(
+              calc(#{$column-width} * 3 + calc(#{$gap-width} * 2)),
+              1fr
+            )
+          );
+        grid-gap: $gap-width;
+        width: auto;
+        /* Typography */
+        /* Other */
 
       figure.project {
         /* Positioning */
@@ -1108,16 +1135,24 @@ html {
     /* Typography */
     /* Other */
 
-    .body {
-      /* Positioning */
-      /* Display and Box model */
-      justify-content: center;
-      display: grid;
-      grid-gap: $gap-width;
-      grid-template-columns: repeat(auto-fit, minmax(auto, calc(#{$column-width} * 3 + calc(#{$gap-width} * 2))));
-      width: 100%;
-      /* Typography */
-      /* Other */
+
+      .body {
+        /* Positioning */
+        /* Display and Box model */
+        justify-content: center;
+        display: grid;
+        grid-gap: $gap-width;
+        grid-template-columns:
+          repeat(
+            auto-fit,
+            minmax(
+              auto,
+              calc(#{$column-width} * 3 + calc(#{$gap-width} * 2))
+            )
+          );
+        width: 100%;
+        /* Typography */
+        /* Other */
 
 
       figure.contact {
@@ -1451,7 +1486,11 @@ html {
       /* Display and Box model */
       display: grid;
       grid-gap: $gap-width;
-      grid-template-columns: repeat(auto-fit, calc(#{$column-width} / 4));
+      grid-template-columns:
+        repeat(
+          auto-fit,
+          calc(#{$column-width} / 4)
+        );
       /* Typography */
       /* Other */
 
