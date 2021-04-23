@@ -881,31 +881,39 @@ html {
         display: grid;
         grid-gap: $gap-width;
         grid-template-areas:
-        "picture . ."
-        "picture caption caption"
-        "picture . ."
-        "text text .";
+        "picture caption"
+        "picture text";
         grid-template-columns:
-          [first] auto
-          [second] 1fr
-          [third] 1fr;
+          [picture] auto
+          [caption] 1fr;
         grid-template-rows:
-          [figure] auto
-          [text] auto;
+          [caption] auto
+          [text] 1fr;
         /* Typography */
         /* Other */
 
         .picture {
           /* Positioning */
           /* Display and Box model */
-          background-color: $white-10;
-          border: $border-width solid $white-20;
           box-sizing: content-box;
           grid-area: picture;
           height: 25rem;
-          width: calc(#{$column-width} * 2 + calc(#{$gap-width}));
+          line-height: 0;
+          background-color: $white-10;
+          border: $border-width solid $white-20;
           /* Typography */
           /* Other */
+
+          img.image {
+            /* Positioning */
+            /* Display and Box model */
+            height: 25rem;
+            object-fit: cover;
+            width: 100%;
+            /* Typography */
+            /* Other */
+            filter: $grayscale;
+          }
         }
 
         figcaption.caption {
@@ -913,7 +921,7 @@ html {
           /* Display and Box model */
           grid-area: caption;
           height: auto;
-          width: auto;
+          min-height: calc(2.369rem * 1.3) + calc(1.777rem * 1.3);
           /* Typography */
           /* Other */
 
