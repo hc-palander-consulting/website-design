@@ -426,49 +426,51 @@ html {
     /* Typography */
     /* Other */
 
+    section.header {
+      /* Positioning */
+      /* Display and Box model */
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      height: 12.5rem;
+      justify-content: center;
+      /* Typography */
+      text-align: center;
+      /* Other */
+
+      .heading {
+        /* Positioning */
+        /* Display and Box model */
+        border-color: $black-40;
+        border-style: solid;
+        border-width: $border-width;
+        height:  $header-height;
+        min-width: calc(#{$column-width} * 4 + (#{$gap-width} * 3));
+        /* Typography */
+        /* Other */
+
+        h2 {
+          /* Positioning */
+          /* Display and Box model */
+          margin: 0;
+          /* Typography */
+          text-transform: uppercase;
+          /* Other */
+          line-height: $header-height;
+        }
+      }
+    }
+
     section.content {
       /* Positioning */
       /* Display and Box model */
       align-items: center;
       display: flex;
       flex-direction: column;
+      height: 100%;
+      justify-content: center;
       /* Typography */
       /* Other */
-
-      .header {
-        /* Positioning */
-        /* Display and Box model */
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        height: 12.5rem;
-        justify-content: center;
-        /* Typography */
-        text-align: center;
-        /* Other */
-
-        .heading {
-          /* Positioning */
-          /* Display and Box model */
-          border-color: $black-40;
-          border-style: solid;
-          border-width: $border-width;
-          height:  $header-height;
-          min-width: calc(#{$column-width} * 4 + (#{$gap-width} * 3));
-          /* Typography */
-          /* Other */
-
-          h2 {
-            /* Positioning */
-            /* Display and Box model */
-            margin: 0;
-            /* Typography */
-            text-transform: uppercase;
-            /* Other */
-            line-height: $header-height;
-          }
-        }
-      }
 
       .body {
 
@@ -546,18 +548,18 @@ html {
         /* Other */
       }
 
-      section.content {
+      section.header {
 
-        .header {
-
-          .heading {
-            /* Positioning */
-            /* Display and Box model */
-            border-color: $white-40;
-            /* Typography */
-            /* Other */
-          }
+        .heading {
+          /* Positioning */
+          /* Display and Box model */
+          border-color: $white-40;
+          /* Typography */
+          /* Other */
         }
+      }
+
+      section.content {
 
         .body {
 
@@ -603,18 +605,18 @@ html {
         /* Other */
       }
 
-      section.content {
+      section.header {
 
-        .header {
-
-          .heading {
-            /* Positioning */
-            /* Display and Box model */
-            border-color: $white-50;
-            /* Typography */
-            /* Other */
-          }
+        .heading {
+          /* Positioning */
+          /* Display and Box model */
+          border-color: $white-50;
+          /* Typography */
+          /* Other */
         }
+      }
+
+      section.content {
 
         .body {
 
@@ -652,18 +654,18 @@ html {
       /* Typography */
       /* Other */
 
-      section.content {
+      section.header {
 
-        .header {
-
-          .heading {
-            /* Positioning */
-            /* Display and Box model */
-            border-color: $black-50;
-            /* Typography */
-            /* Other */
-          }
+        .heading {
+          /* Positioning */
+          /* Display and Box model */
+          border-color: $black-50;
+          /* Typography */
+          /* Other */
         }
+      }
+
+      section.content {
 
         .body {
 
