@@ -316,6 +316,10 @@ html {
           font-weight: 700;
           line-height: 1;
           /* Other */
+
+          @media screen and (max-width: $mobile-width) {
+            display: none;
+          }
         }
 
         .tagline {
@@ -328,6 +332,10 @@ html {
           font-weight: 700;
           line-height: 1;
           /* Other */
+
+          @media screen and (max-width: $mobile-width) {
+            display: none;
+          }
         }
       }
     }
@@ -360,6 +368,10 @@ html {
     width: 100%;
     /* Typography */
     /* Other */
+
+    @media screen and (max-width: $tablet-width) {
+      display: none;
+    }
 
     a.link {
       /* Positioning */
@@ -402,6 +414,10 @@ html {
     grid-area: language;
     /* Typography */
     /* Other */
+
+    @media screen and (max-width: $tablet-width) {
+      display: none;
+    }
 
     a.link {
       /* Positioning */
@@ -488,6 +504,10 @@ html {
         min-width: calc(#{$column-width} * 4 + (#{$gap-width} * 3));
         /* Typography */
         /* Other */
+
+        @media screen and (max-width: $mobile-width) {
+          min-width: 100%;
+        }
 
         h2 {
           /* Positioning */
