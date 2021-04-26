@@ -214,7 +214,7 @@ html {
       [first] 1fr;
     justify-items: center;
     height: $header-height;
-    padding: $gap-width $column-width;
+    padding: $gap-width clamp(#{$gap-width}, 5%, calc(#{$column-width} + #{$gap-width}));
     width: 100%;
     /* Typography */
     /* Other */
@@ -364,7 +364,6 @@ html {
     grid-template-rows:
       [first] auto;
     justify-content: end;
-    padding: 0 $gap-width;
     width: 100%;
     /* Typography */
     /* Other */
@@ -477,8 +476,7 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: $header-height;
-    padding: 0 $column-width;
+    padding: 0 clamp(#{$gap-width}, 5%, calc(#{$column-width} + #{$gap-width}));
     /* Typography */
     /* Other */
 
