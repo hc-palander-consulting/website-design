@@ -257,7 +257,7 @@ html {
       [about] minmax(calc(100vh - #{$header-height}), auto)
       [projects] minmax(calc(100vh - #{$header-height}), auto)
       [contact] minmax(calc(100vh - #{$header-height}), auto);
-      margin-top: $header-height;
+    margin-top: $header-height;
     /* Typography */
     /* Other */
   }
