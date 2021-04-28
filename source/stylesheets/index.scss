@@ -323,6 +323,7 @@ html {
         .name {
           /* Positioning */
           /* Display and Box model */
+          display: none;
           /* Typography */
           font-family: inherit;
           font-size: 1.4375rem;
@@ -330,15 +331,20 @@ html {
           line-height: 1;
           /* Other */
 
-          @media screen and (max-width: $mobile-width) {
-            display: none;
+          @media screen and (min-width: $tablet-width) {
+            /* Positioning */
+            /* Display and Box model */
+            display: block;
+            /* Typography */
+            /* Other */
           }
         }
 
         .tagline {
           /* Positioning */
           /* Display and Box model */
-          margin-top: calc(#{$gap-width}/4);
+          display: none;
+          margin-top: calc(#{$gap-width} / 4);
           /* Typography */
           font-family: inherit;
           font-size: 1.0625rem;
@@ -346,8 +352,12 @@ html {
           line-height: 1;
           /* Other */
 
-          @media screen and (max-width: $mobile-width) {
-            display: none;
+          @media screen and (min-width: $tablet-width) {
+            /* Positioning */
+            /* Display and Box model */
+            display: block;
+            /* Typography */
+            /* Other */
           }
         }
       }
@@ -366,7 +376,7 @@ html {
     /* Positioning */
     /* Display and Box model */
     align-content: center;
-    display: grid;
+    display: none;
     grid-area: navigation;
     grid-gap: $gap-width;
     grid-template-columns:
@@ -381,8 +391,12 @@ html {
     /* Typography */
     /* Other */
 
-    @media screen and (max-width: $tablet-width) {
-      display: none;
+    @media screen and (min-width: $tablet-width) {
+      /* Positioning */
+      /* Display and Box model */
+      display: grid;
+      /* Typography */
+      /* Other */
     }
 
     a.link {
@@ -421,14 +435,18 @@ html {
     /* Positioning */
     /* Display and Box model */
     align-items: center;
-    display: flex;
+    display: none;
     flex-direction: row;
     grid-area: language;
     /* Typography */
     /* Other */
 
-    @media screen and (max-width: $tablet-width) {
-      display: none;
+    @media screen and (min-width: $tablet-width) {
+      /* Positioning */
+      /* Display and Box model */
+      display: flex;
+      /* Typography */
+      /* Other */
     }
 
     a.link {
@@ -512,12 +530,16 @@ html {
         border-style: solid;
         border-width: $border-width;
         height:  $header-height;
-        min-width: calc(#{$column-width} * 4 + (#{$gap-width} * 3));
+        min-width: 100%;
         /* Typography */
         /* Other */
 
-        @media screen and (max-width: $mobile-width) {
-          min-width: 100%;
+        @media screen and (min-width: $tablet-width) {
+          /* Positioning */
+          /* Display and Box model */
+          min-width: calc(#{$column-width} * 4 + (#{$gap-width} * 3));
+          /* Typography */
+          /* Other */
         }
 
         h2 {
@@ -855,18 +877,26 @@ html {
         /* Positioning */
         /* Display and Box model */
         display: grid;
-        grid-template-columns:
-          repeat(
-            auto-fill,
-            minmax(
-              calc(#{$column-width} * 3 + calc(#{$gap-width} * 2)),
-              1fr
-            )
-          );
+        grid-template-columns: 1fr;
         grid-gap: $gap-width;
         width: 100%;
         /* Typography */
         /* Other */
+
+        @media screen and (min-width: $tablet-width) {
+          /* Positioning */
+          /* Display and Box model */
+          grid-template-columns:
+            repeat(
+              auto-fill,
+              minmax(
+                calc(#{$column-width} * 3 + calc(#{$gap-width} * 2)),
+                1fr
+              )
+            );
+          /* Typography */
+          /* Other */
+        }
 
         figure.service {
           /* Positioning */
@@ -959,18 +989,26 @@ html {
         /* Positioning */
         /* Display and Box model */
         display: grid;
-        grid-template-columns:
-          repeat(
-            auto-fit,
-            minmax(
-              calc(#{$column-width} * 5 + calc(#{$gap-width} * 4)),
-              1fr
-            )
-          );
+        grid-template-columns: 1fr;
         grid-gap: $gap-width;
         width: auto;
         /* Typography */
         /* Other */
+
+        @media screen and (min-width: $tablet-width) {
+          /* Positioning */
+          /* Display and Box model */
+          grid-template-columns:
+            repeat(
+              auto-fit,
+              minmax(
+                calc(#{$column-width} * 5 + calc(#{$gap-width} * 4)),
+                1fr
+              )
+            );
+          /* Typography */
+          /* Other */
+        }
 
         figure.bio {
           /* Positioning */
@@ -978,38 +1016,67 @@ html {
           display: grid;
           grid-gap: $gap-width;
           grid-template-areas:
-          "picture caption"
-          "picture text";
-          grid-template-columns:
-            [picture] auto
-            [caption] 1fr;
-          grid-template-rows:
-            [caption] auto
-            [text] 1fr;
+            "picture"
+            "caption"
+            "text";
+          grid-template-columns: 1fr;
+          grid-template-rows: auto;
           /* Typography */
           /* Other */
+
+          @media screen and (min-width: $tablet-width) {
+            /* Positioning */
+            /* Display and Box model */
+            grid-template-areas:
+              "picture caption"
+              "picture text";
+            grid-template-columns:
+              [picture] auto
+              [caption] 1fr;
+            grid-template-rows:
+              [caption] auto
+              [text] 1fr;
+            /* Typography */
+            /* Other */
+          }
 
           .picture {
             /* Positioning */
             /* Display and Box model */
             box-sizing: content-box;
             grid-area: picture;
-            height: 25rem;
+            height: auto;
             line-height: 0;
             background-color: $white-10;
             border: $border-width solid $white-20;
             /* Typography */
             /* Other */
 
-            img.image {
+            @media screen and (min-width: $tablet-width) {
               /* Positioning */
               /* Display and Box model */
               height: 25rem;
-              object-fit: cover;
+              /* Typography */
+              /* Other */
+            }
+
+            img.image {
+              /* Positioning */
+              /* Display and Box model */
+              height: auto;
+              object-fit: contain;
               width: 100%;
               /* Typography */
               /* Other */
               filter: $grayscale;
+
+              @media screen and (min-width: $tablet-width) {
+                /* Positioning */
+                /* Display and Box model */
+                height: 25rem;
+                /* Typography */
+                /* Other */
+              }
             }
           }
 
@@ -1060,18 +1127,26 @@ html {
         /* Positioning */
         /* Display and Box model */
         display: grid;
-        grid-template-columns:
-          repeat(
-            auto-fill,
-            minmax(
-              calc(#{$column-width} * 3 + calc(#{$gap-width} * 2)),
-              1fr
-            )
-          );
+        grid-template-columns: 1fr;
         grid-gap: $gap-width;
         width: auto;
         /* Typography */
         /* Other */
+
+        @media screen and (min-width: $tablet-width) {
+          /* Positioning */
+          /* Display and Box model */
+          grid-template-columns:
+            repeat(
+              auto-fill,
+              minmax(
+                calc(#{$column-width} * 3 + calc(#{$gap-width} * 2)),
+                1fr
+              )
+            );
+          /* Typography */
+          /* Other */
+        }
 
         figure.project {
           /* Positioning */
@@ -1219,18 +1294,25 @@ html {
         justify-content: center;
         display: grid;
         grid-gap: $gap-width;
-        grid-template-columns:
-          repeat(
-            auto-fit,
-            minmax(
-              auto,
-              calc(#{$column-width} * 3 + calc(#{$gap-width} * 2))
-            )
-          );
+        grid-template-columns: 1fr;
         width: 100%;
         /* Typography */
         /* Other */
 
+        @media screen and (min-width: $tablet-width) {
+          /* Positioning */
+          /* Display and Box model */
+          grid-template-columns:
+            repeat(
+              auto-fit,
+              minmax(
+                auto,
+                calc(#{$column-width} * 3 + calc(#{$gap-width} * 2))
+              )
+            );
+          /* Typography */
+          /* Other */
+        }
 
         figure.contact {
           /* Positioning */
@@ -1351,18 +1433,26 @@ html {
         /* Positioning */
         /* Display and Box model */
         display: grid;
-        grid-template-columns:
-          repeat(
-            auto-fit,
-            minmax(
-              calc(#{$column-width} * 3 + calc(#{$gap-width} * 2)),
-              1fr
-            )
-          );
+        grid-template-columns: 1fr;
         grid-gap: $gap-width;
         width: 100%;
         /* Typography */
         /* Other */
+
+        @media screen and (min-width: $tablet-width) {
+          /* Positioning */
+          /* Display and Box model */
+          grid-template-columns:
+            repeat(
+              auto-fit,
+              minmax(
+                calc(#{$column-width} * 2 + calc(#{$gap-width} * 1)),
+                1fr
+              )
+            );
+          /* Typography */
+          /* Other */
+        }
 
         a.link {
           /* Positioning */
