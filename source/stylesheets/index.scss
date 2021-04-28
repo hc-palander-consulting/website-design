@@ -1504,13 +1504,14 @@ html {
       /* Other */
 
       li {
+        line-height: 0;
 
         a.link {
           /* Positioning */
           /* Display and Box model */
           display: inline-block;
           /* Typography */
-          line-height: 1;
+          line-height: 0;
           /* Other */
 
           &:hover {
@@ -1528,8 +1529,7 @@ html {
             /* Positioning */
             /* Display and Box model */
             border: $border-width solid $white-20;
-            padding: calc(#{$gap-width} * 2);
-            width: calc(#{$column-width} * 2);
+            max-width: calc(#{$column-width} * 2 + #{$gap-width});
             /* Typography */
             /* Other */
 
