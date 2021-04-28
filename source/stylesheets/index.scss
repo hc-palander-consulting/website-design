@@ -196,7 +196,8 @@ html {
     "header"
     "main"
     "footer";
-  grid-template-columns: 100%;
+  grid-template-columns:
+    [first] 1fr;
   grid-template-rows:
     [header] auto
     [main] 1fr
