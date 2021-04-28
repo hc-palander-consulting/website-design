@@ -59,7 +59,7 @@ $header-height: calc(#{$gap-width} * 2 + #{$nav-height}); /* padding (top + bott
 $fluid-padding: $gap-width clamp(#{$gap-width}, 5%, calc(#{$column-width} + #{$gap-width}));
 
 /* Resolutions */
-$mobile-width: 20em; /* 320px */
+$mobile-width: 20rem; /* 320px */
 $tablet-width: 48rem;/* 768px */
 $full-hd-width: 120rem; /* 1920 (Full HD) */
 $two-k-width: 128rem; /* 2048 x 1080 (2k) */
