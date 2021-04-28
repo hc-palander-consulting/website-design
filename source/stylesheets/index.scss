@@ -813,6 +813,7 @@ html {
     filter: $grayscale;
     grid-area: hero;
     justify-content: center;
+    padding: 0;
     /* Typography */
     /* Other */
 
@@ -825,7 +826,6 @@ html {
       flex-direction: row;
       height: 100%;
       justify-content: center;
-      margin: 0 calc(#{$column-width} * -1);
       /* Typography */
       text-align: center;
       /* Other */
@@ -834,7 +834,8 @@ html {
         /* Positioning */
         /* Display and Box model */
         margin: 0;
-        max-width: calc(#{$column-width} * 4 + calc(#{$gap-width} * 3));
+        max-width: calc(#{$column-width} * 6 + calc(#{$gap-width} * 5));
+        padding: $gap-width;
         /* Typography */
         color: $white-100;
         text-transform: uppercase;
@@ -856,7 +857,6 @@ html {
         /* Positioning */
         /* Display and Box model */
         max-width: calc(#{$column-width} * 6 + calc(#{$gap-width} * 5));
-        margin-top: calc(#{$column-width} / 3);
         /* Typography */
         text-align: center;
         /* Other */
