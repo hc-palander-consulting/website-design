@@ -55,7 +55,8 @@ $border-width: 0.125rem; /* 2 px */
 $column-width: 7.375rem; /* 118 px */
 $gap-width: 1.25rem; /* 20 px */
 $nav-height: 3.75rem; /* 60 px */
-$header-height: calc(calc(#{$gap-width} * 2 ) + #{$nav-height}); /* padding (top + bottom) + nav height */
+$header-height: calc(#{$gap-width} * 2 + #{$nav-height}); /* padding (top + bottom) + nav height */
+$fluid-padding: $gap-width clamp(#{$gap-width}, 5%, calc(#{$column-width} + #{$gap-width}));
 
 /* Resolutions */
 $mobile-width: 20em; /* 320px */
@@ -226,7 +227,7 @@ html {
       [first] 1fr;
     justify-items: center;
     height: $header-height;
-    padding: $gap-width clamp(#{$gap-width}, 5%, calc(#{$column-width} + #{$gap-width}));
+    padding: $fluid-padding;
     width: 100%;
     /* Typography */
     /* Other */
@@ -488,7 +489,7 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 0 clamp(#{$gap-width}, 5%, calc(#{$column-width} + #{$gap-width}));
+    padding: $fluid-padding;
     /* Typography */
     /* Other */
 
@@ -1329,7 +1330,7 @@ html {
   section.content {
     /* Positioning */
     /* Display and Box model */
-    padding: $gap-width $column-width;
+    padding: $fluid-padding;
     /* Typography */
     /* Other */
 
