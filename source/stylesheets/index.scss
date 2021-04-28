@@ -406,7 +406,7 @@ html {
       border-style: solid;
       border-color: $white-100;
       min-width: $column-width;
-      padding: calc(#{$gap-width}/2) calc(#{$gap-width}/2) 0.5625rem;
+      padding: calc(#{$gap-width} / 2) calc(#{$gap-width} / 2) 0.5625rem;
       /* Typography */
       color:  $black-100;
       font-family: $font-family-monospace;
@@ -455,8 +455,8 @@ html {
       border-width: $border-width;
       border-style: solid;
       border-color: $black-10;
-      min-width: calc(#{$column-width}/2);
-      padding: calc(#{$gap-width}/2) calc(#{$gap-width}/2) 0.5625rem;
+      min-width: calc(#{$column-width} / 2);
+      padding: calc(#{$gap-width} / 2) calc(#{$gap-width} / 2) 0.5625rem;
       /* Typography */
       color:  $black-100;
       font-family: $font-family-monospace;
@@ -1156,10 +1156,10 @@ html {
           box-sizing: content-box;
           display: grid;
           grid-template-areas:
-          "picture"
-          "caption"
-          "text"
-          "more";
+            "picture"
+            "caption"
+            "text"
+            "more";
           grid-template-columns:
             [first] 1fr;
           grid-template-rows:
@@ -1321,9 +1321,9 @@ html {
           border: $black-20 solid $border-width;
           display: grid;
           grid-template-areas:
-          "icon"
-          "caption"
-          "text";
+            "icon"
+            "caption"
+            "text";
           grid-template-columns:
             [first] auto;
           grid-template-rows:
