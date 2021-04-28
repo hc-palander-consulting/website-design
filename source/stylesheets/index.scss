@@ -70,7 +70,7 @@ $perfect-fourth: 1.333;
 $golden-ratio: 1.618;
 $min-font-size: 1rem; /* 16px */
 $preferred-font-size: calc((#{strip-unit($min-font-size)} / #{strip-unit(100vw)}) * 100  * 1vw); /* (absoluteSize / breakpoint) * 100% * 1unit (to get units) */
-$max-font-size: 0.78125vw; /* (16px / 1920 * 100) */
+$max-font-size: 0.78125vw; /* (16px / 2048 * 100) */
 
 /* Filters */
 $light-gray: invert(99%) sepia(5%) saturate(0%) hue-rotate(95deg) brightness(107%) contrast(100%);
@@ -98,7 +98,7 @@ html {
 $font-family-sans-serif: "Calibri", Roboto, Arial, sans-serif;
 $font-family-monospace: "Courier Prime", "Courier New", monospace;
 
-/* Typographic Scale */
+/* Typographic Scale (Perfect Fourth) */
 html {
   font-size: 100%;
   font-size: clamp(#{$min-font-size}, #{$preferred-font-size}, #{$max-font-size});
@@ -620,7 +620,11 @@ html {
         &:hover {
           .icon {
             .image {
+              /* Positioning */
+              /* Display and Box model */
               opacity: 1;
+              /* Typography */
+              /* Other */
             }
           }
         }
@@ -678,6 +682,10 @@ html {
           .icon {
 
             .image {
+              /* Positioning */
+              /* Display and Box model */
+              /* Typography */
+              /* Other */
               filter: $light-gray;
             }
           }
@@ -735,6 +743,10 @@ html {
           .icon {
 
             .image {
+              /* Positioning */
+              /* Display and Box model */
+              /* Typography */
+              /* Other */
               filter: $light-gray;
             }
           }
@@ -795,7 +807,11 @@ html {
           &:hover {
             .icon {
               .image {
+                /* Positioning */
+                /* Display and Box model */
                 opacity: 1;
+                /* Typography */
+                /* Other */
               }
             }
           }
@@ -812,12 +828,12 @@ html {
     background-position: right 85% bottom 75%;
     background-repeat: no-repeat;
     background-size: cover;
-    filter: $grayscale;
     grid-area: hero;
     justify-content: center;
     padding: 0;
     /* Typography */
     /* Other */
+    filter: $grayscale;
 
     section.content {
       /* Positioning */
@@ -916,10 +932,6 @@ html {
           /* Other */
 
           figcaption.caption {
-            /* Positioning */
-            /* Display and Box model */
-            /* Typography */
-            /* Other */
 
             .title {
               /* Positioning */
@@ -1508,8 +1520,12 @@ html {
       .text {
 
         p {
+          /* Positioning */
+          /* Display and Box model */
           margin-bottom: 0;
+          /* Typography */
           text-align: center;
+          /* Other */
         }
       }
     }
@@ -1611,7 +1627,11 @@ html {
       /* Other */
 
       li {
+        /* Positioning */
+        /* Display and Box model */
+        /* Typography */
         line-height: 0;
+        /* Other */
 
         a.link {
           /* Positioning */
