@@ -1033,7 +1033,8 @@ html {
             "picture"
             "caption"
             "text";
-          grid-template-columns: 1fr;
+          grid-template-columns:
+            [first] 1fr;
           grid-template-rows: auto;
           /* Typography */
           /* Other */
@@ -1057,19 +1058,21 @@ html {
           .picture {
             /* Positioning */
             /* Display and Box model */
+            align-self: start;
+            background-color: $white-10;
+            border: $border-width solid $white-20;
             box-sizing: content-box;
             grid-area: picture;
             height: auto;
             line-height: 0;
-            background-color: $white-10;
-            border: $border-width solid $white-20;
+            width: 100%;
             /* Typography */
             /* Other */
 
             @media screen and (min-width: $tablet-width) {
               /* Positioning */
               /* Display and Box model */
-              height: 25rem;
+              max-width: calc(#{$column-width} * 2 + #{$gap-width});
               /* Typography */
               /* Other */
             }
@@ -1077,20 +1080,12 @@ html {
             img.image {
               /* Positioning */
               /* Display and Box model */
-              height: auto;
               object-fit: contain;
+              height: auto;
               width: 100%;
               /* Typography */
               /* Other */
               filter: $grayscale;
-
-              @media screen and (min-width: $tablet-width) {
-                /* Positioning */
-                /* Display and Box model */
-                height: 25rem;
-                /* Typography */
-                /* Other */
-              }
             }
           }
 
