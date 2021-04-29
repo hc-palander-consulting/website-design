@@ -1709,19 +1709,27 @@ html {
         /* Typography */
         height: 1.75rem;
         /* Other */
-      }
 
-      span.icon {
-        /* Positioning */
-        /* Display and Box model */
-        align-items: center;
-        display: flex; /* make inline-block to have control over height */
-        flex-direction: column;
-        width: 1.75rem;
-        /* Typography */
-        font-size: 1.75rem;
-        line-height: 0;
-        /* Other */
+        a.link {
+          /* Positioning */
+          /* Display and Box model */
+          /* Typography */
+          text-decoration: none;
+          /* Other */
+
+          span.icon {
+            /* Positioning */
+            /* Display and Box model */
+            align-items: center;
+            display: flex; /* make inline-block to have control over height */
+            flex-direction: column;
+            width: 1.75rem;
+            /* Typography */
+            font-size: 1.75rem;
+            line-height: 0;
+            /* Other */
+          }
+        }
       }
     }
   }
