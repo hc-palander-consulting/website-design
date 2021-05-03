@@ -1887,7 +1887,11 @@ html {
           /* Display and Box model */
           margin-bottom: 0;
           /* Typography */
+          font-family: $font-family-monospace;
+          font-size: 0.8125rem;
+          font-weight: 400;
           text-align: center;
+          text-transform: uppercase;
           /* Other */
         }
       }
