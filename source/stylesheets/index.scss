@@ -1257,7 +1257,7 @@ html {
         /* Display and Box model */
         display: grid;
         grid-template-columns: 1fr;
-        grid-gap: $gap-width;
+        gap: $gap-width;
         width: 100%;
         /* Typography */
         /* Other */
@@ -1365,7 +1365,7 @@ html {
         /* Display and Box model */
         display: grid;
         grid-template-columns: 1fr;
-        grid-gap: $gap-width;
+        gap: $gap-width;
         width: auto;
         /* Typography */
         /* Other */
@@ -1389,7 +1389,7 @@ html {
           /* Positioning */
           /* Display and Box model */
           display: grid;
-          grid-gap: $gap-width;
+          gap: $gap-width;
           grid-template-areas:
             "picture"
             "caption"
@@ -1498,7 +1498,7 @@ html {
         /* Display and Box model */
         display: grid;
         grid-template-columns: 1fr;
-        grid-gap: $gap-width;
+        gap: $gap-width;
         width: auto;
         /* Typography */
         /* Other */
@@ -1663,7 +1663,7 @@ html {
         /* Display and Box model */
         justify-content: center;
         display: grid;
-        grid-gap: $gap-width;
+        gap: $gap-width;
         grid-template-columns: 1fr;
         width: 100%;
         /* Typography */
@@ -1818,7 +1818,7 @@ html {
         /* Display and Box model */
         display: grid;
         grid-template-columns: 1fr;
-        grid-gap: $gap-width;
+        gap: $gap-width;
         width: 100%;
         /* Typography */
         /* Other */
@@ -1973,7 +1973,7 @@ html {
       /* Positioning */
       /* Display and Box model */
       display: grid;
-      grid-gap: $gap-width;
+      gap: $gap-width;
       grid-template-columns:
         repeat(
           auto-fit,
@@ -2053,7 +2053,7 @@ html {
       /* Positioning */
       /* Display and Box model */
       display: grid;
-      grid-gap: $gap-width;
+      gap: $gap-width;
       grid-template-columns:
         repeat(
           auto-fit,
