@@ -151,7 +151,7 @@ html {
       /* Typography */
       font-size: clamp(
         calc(#{$minor-third} * #{$minor-third} * #{$minor-third} * #{$minor-third} * #{$minor-third} * 1rem),
-        3.5072916666666667vw,
+        calc(#{strip-unit($perfect-fourth * $perfect-fourth * $perfect-fourth * $perfect-fourth * $perfect-fourth)} * #{strip-unit(1rem)} / #{strip-unit(100vw)} * 100  * 1vw),
         calc(#{$golden-ratio} * #{$golden-ratio} * #{$golden-ratio} * #{$golden-ratio} * #{$golden-ratio} * 1rem)
       );
       /* Other */
@@ -163,9 +163,10 @@ html {
       /* Typography */
       font-size: clamp(
         calc(#{$minor-third} * #{$minor-third} * #{$minor-third} * #{$minor-third} * 1rem),
-        2.63125vw,
+        calc(#{strip-unit($perfect-fourth * $perfect-fourth * $perfect-fourth * $perfect-fourth)} * #{strip-unit(1rem)} / #{strip-unit(100vw)} * 100  * 1vw),
         calc(#{$golden-ratio} * #{$golden-ratio} * #{$golden-ratio} * #{$golden-ratio} * 1rem)
       );
+      /* Other */
     }
 
     h3 {
@@ -174,7 +175,7 @@ html {
       /* Typography */
       font-size: clamp(
         calc(#{$minor-third} * #{$minor-third} * #{$minor-third} * 1rem),
-        1.973958333333333vw,
+        calc(#{strip-unit($perfect-fourth * $perfect-fourth * $perfect-fourth)} * #{strip-unit(1rem)} / #{strip-unit(100vw)} * 100  * 1vw),
         calc(#{$golden-ratio} * #{$golden-ratio} * #{$golden-ratio} * 1rem)
       );
       /* Other */
@@ -186,7 +187,7 @@ html {
       /* Typography */
       font-size: clamp(
         calc(#{$minor-third} * #{$minor-third} * 1rem),
-        1.4807291666666667vw,
+        calc(#{strip-unit($perfect-fourth * $perfect-fourth)} * #{strip-unit(1rem)} / #{strip-unit(100vw)} * 100  * 1vw),
         calc(#{$golden-ratio} * #{$golden-ratio} * 1rem)
       );
       /* Other */
@@ -198,7 +199,7 @@ html {
       /* Typography */
       font-size: clamp(
         calc(#{$minor-third} * 1rem),
-        1.1109375vw,
+        calc(#{strip-unit($perfect-fourth)} * #{strip-unit(1rem)} / #{strip-unit(100vw)} * 100  * 1vw),
         calc(#{$golden-ratio} * 1rem)
       );
       /* Other */
@@ -218,7 +219,7 @@ html {
       /* Typography */
       font-size: clamp(
         calc(1rem / #{$minor-third}),
-        0.625vw,
+        calc(#{strip-unit(1rem)} / #{strip-unit($perfect-fourth)} / #{strip-unit(100vw)} * 100  * 1vw),
         calc(1rem / #{$golden-ratio})
       );
       /* Other */
