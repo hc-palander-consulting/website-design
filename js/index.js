@@ -23,6 +23,12 @@ docReady(function() {
   const header = document.getElementById("header");
   const menu = document.getElementById("menu");
   const language = document.getElementById("language");
+  // Device Sizes
+  const smallDevices = "screen and (max-width: 320px)";
+  const mediumDevices = "screen and (min-width: 321px) and (max-width: 767px)";
+  const largeDevices = "screen and (min-width: 768px) and (max-width: 991px)";
+  const extraLargeDevices = "screen and (min-width: 992px) and (max-width: 1199px)";
+  const highDefDevices = "screen and (min-width: 1200px)";
 
   // FUNCTIONS
   // Show/Hide functions
@@ -97,4 +103,53 @@ docReady(function() {
     }
   }
 
+  // Toggle Menu and Language visibility on window resize
+  window.addEventListener("resize", () => {
+    toggleMenuVisibility();
+  }, true);
+
+  // Media Queries
+  enquire.register(smallDevices, function () {
+    // Hide Menu and Language containers
+    hide(menu);
+    hide(language);
+    // Show Menu Button
+    show(menuButton);
+  });
+
+  enquire.register(mediumDevices, function () {
+    // Hide Menu and Language containers
+    hide(menu);
+    hide(language);
+    // Show Menu Button
+    show(menuButton);
+  });
+
+  enquire.register(largeDevices, function () {
+    // Hide Menu and Language containers
+    hide(menu);
+    hide(language);
+    // Show Menu Button
+    show(menuButton);
+  });
+
+  enquire.register(extraLargeDevices, function () {
+    // Show Menu and Language containers
+    show(menu);
+    show(language);
+    // Check if the Menu can fit in the Navigation container and make visible
+    toggleMenuVisibility();
+  });
+
+  enquire.register(highDefDevices, function () {
+    // Show Menu and Language containers
+    show(menu);
+    show(language);
+    // Check if the Menu can fit in the Navigation container and make visible
+    toggleMenuVisibility();
+  });
 });
+
+
+
+

@@ -60,9 +60,13 @@ $header-height: calc(#{$gap-width} * 2 + #{$nav-height}); /* padding (top + bott
 $fluid-horizontal-padding: clamp(#{$gap-width}, 10%, calc(#{$column-width} + (#{$gap-width} / 2)));
 
 /* Resolutions */
+$small-devices: 20rem; /* 320 */
+$medium-devices: 48rem;/* 768 */
 $large-devices: 62rem; /* 992 */
+$extra-large-devices: 75rem; /* 1200 */
 $full-hd-width: 120rem; /* 1920 (Full HD) */
 $two-k-width: 128rem; /* 2048 x 1080 (2k) */
+$four-k-devices: 240rem; /* 3840 x 2160 (4k) */
 
 /* Font sizes */
 $minor-third: 1.200;
@@ -566,7 +570,7 @@ html {
           line-height: 1;
           /* Other */
 
-          @media screen and (min-width: $tablet-width) {
+          @media screen and (min-width: $medium-devices) {
             /* Positioning */
             /* Display and Box model */
             display: block;
@@ -587,7 +591,7 @@ html {
           line-height: 1;
           /* Other */
 
-          @media screen and (min-width: $tablet-width) {
+          @media screen and (min-width: $medium-devices) {
             /* Positioning */
             /* Display and Box model */
             display: block;
@@ -858,7 +862,7 @@ html {
         /* Typography */
         /* Other */
 
-        @media screen and (min-width: $tablet-width) {
+        @media screen and (min-width: $medium-devices) {
           /* Positioning */
           /* Display and Box model */
           min-width: calc(#{$column-width} * 4 + (#{$gap-width} * 3));
@@ -1223,7 +1227,7 @@ html {
         /* Typography */
         /* Other */
 
-        @media screen and (min-width: $tablet-width) {
+        @media screen and (min-width: $medium-devices) {
           /* Positioning */
           /* Display and Box model */
           grid-template-columns:
@@ -1331,7 +1335,7 @@ html {
         /* Typography */
         /* Other */
 
-        @media screen and (min-width: $tablet-width) {
+        @media screen and (min-width: $medium-devices) {
           /* Positioning */
           /* Display and Box model */
           grid-template-columns:
@@ -1361,7 +1365,7 @@ html {
           /* Typography */
           /* Other */
 
-          @media screen and (min-width: $tablet-width) {
+          @media screen and (min-width: $medium-devices) {
             /* Positioning */
             /* Display and Box model */
             grid-template-areas:
@@ -1391,7 +1395,7 @@ html {
             /* Typography */
             /* Other */
 
-            @media screen and (min-width: $tablet-width) {
+            @media screen and (min-width: $medium-devices) {
               /* Positioning */
               /* Display and Box model */
               max-width: calc(#{$column-width} * 2 + #{$gap-width});
@@ -1464,7 +1468,7 @@ html {
         /* Typography */
         /* Other */
 
-        @media screen and (min-width: $tablet-width) {
+        @media screen and (min-width: $medium-devices) {
           /* Positioning */
           /* Display and Box model */
           grid-template-columns:
@@ -1630,7 +1634,7 @@ html {
         /* Typography */
         /* Other */
 
-        @media screen and (min-width: $tablet-width) {
+        @media screen and (min-width: $medium-devices) {
           /* Positioning */
           /* Display and Box model */
           grid-template-columns:
@@ -1784,7 +1788,7 @@ html {
         /* Typography */
         /* Other */
 
-        @media screen and (min-width: $tablet-width) {
+        @media screen and (min-width: $medium-devices) {
           /* Positioning */
           /* Display and Box model */
           grid-template-columns:
