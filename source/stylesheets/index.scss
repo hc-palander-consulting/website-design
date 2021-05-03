@@ -1380,7 +1380,7 @@ html {
             repeat(
               auto-fit,
               minmax(
-                calc(#{$column-width} * 5 + calc(#{$gap-width} * 4)),
+                calc(#{$column-width} * 4 + calc(#{$gap-width} * 3)),
                 1fr
               )
             );
