@@ -82,6 +82,7 @@ $grayscale: grayscale(100%);
 
 /* Effects */
 $box-shadow: 0.0625rem 0.25rem 0.25rem $black-10;
+$dark-top-gradient: linear-gradient(to bottom, $black-100, $black-0);
 $standard-animation: all 0.3s ease-in-out;
 
 /*=====================*/
@@ -1165,7 +1166,7 @@ html {
       /* Positioning */
       /* Display and Box model */
       align-items: center;
-      background-image: linear-gradient(to right, $black-100, $black-0);
+      background-image: $dark-top-gradient;
       display: flex;
       flex-direction: row;
       height: 100%;
