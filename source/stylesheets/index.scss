@@ -80,6 +80,16 @@ $grayscale: grayscale(100%);
 
 /* Effects */
 $box-shadow: 0.0625rem 0.25rem 0.25rem $black-10;
+// $border-box-shadow:
+//   $border-width 0 0 0 $black-100,
+//   0 $border-width 0 0 $black-100,
+//   $border-width $border-width 0 0 $black-100,
+//   $border-width 0 0 0 $black-100 inset,
+//   0 $border-width 0 0 $black-100 inset;
+// @mixin border-box-shadow($color, $border) {
+//   box-shadow: inset 0 0 0 calc(#{$border} * 1.25) $color;
+// }
+
 $dark-top-gradient: linear-gradient(to bottom, $black-100, $black-0);
 $standard-animation: all 0.3s ease-in-out;
 
@@ -87,6 +97,10 @@ $standard-animation: all 0.3s ease-in-out;
 /* GENERAL             */
 /*=====================*/
 html {
+  /* Positioning */
+  /* Display and Box model */
+  /* Typography */
+  /* Other */
   scroll-behavior: smooth;
   scroll-padding-top: calc(#{$header-height} - 0.0625rem); // fix the extra px bug in Chrome and Edge
 }
@@ -661,6 +675,7 @@ html {
       border-width: $border-width;
       border-style: solid;
       border-color: $black-0;
+      //@include border-box-shadow(none, 0);
       padding: calc(#{$gap-width} / 2) calc(#{$gap-width} / 2) 0.5625rem;
       /* Typography */
       font-family: $font-family-monospace;
@@ -676,6 +691,7 @@ html {
         /* Display and Box model */
         border-color: $black-100;
         border-style: solid;
+        //@include border-box-shadow($black-100, $border-width);
         /* Typography */
         color: $black-100;
         /* Other */
@@ -772,6 +788,7 @@ html {
           /* Positioning */
           /* Display and Box model */
           border-color: $black-100;
+          //@include border-box-shadow($black-100, $border-width);
           /* Typography */
           /* Other */
           cursor: pointer;
@@ -782,6 +799,7 @@ html {
           /* Display and Box model */
           //border-color: $black-10;
           border: none;
+          //@include border-box-shadow($black-0, $border-width);
           background: $black-10;
           //background-clip: padding-box;
           height: 2.25rem;
@@ -794,6 +812,7 @@ html {
             /* Positioning */
             /* Display and Box model */
             border-color: $black-10;
+            //@include border-box-shadow($black-0, $border-width);
             /* Typography */
             /* Other */
             cursor: default;
@@ -898,6 +917,7 @@ html {
         border-color: $black-40;
         border-style: solid;
         border-width: $border-width;
+        //@include border-box-shadow($black-40, $border-width);
         height:  $header-height;
         min-width: 100%;
         /* Typography */
@@ -1020,6 +1040,7 @@ html {
           /* Positioning */
           /* Display and Box model */
           border-color: $white-40;
+          //@include border-box-shadow($white-40, $border-width);
           /* Typography */
           /* Other */
         }
@@ -1081,6 +1102,7 @@ html {
           /* Positioning */
           /* Display and Box model */
           border-color: $white-50;
+          //@include border-box-shadow($white-50, $border-width);
           /* Typography */
           /* Other */
         }
@@ -1290,6 +1312,7 @@ html {
           align-items: center;
           background: $white-50;
           border: $border-width solid $black-20;
+          //@include border-box-shadow($black-20, $border-width);
           box-sizing: content-box;
           display: flex;
           flex-direction: column;
@@ -1429,6 +1452,7 @@ html {
             align-self: start;
             background-color: $white-10;
             border: $border-width solid $white-20;
+            //box-shadow: 0 0 0 calc(#{$border-width} * 1.25) $white-40;
             box-sizing: content-box;
             grid-area: picture;
             height: auto;
