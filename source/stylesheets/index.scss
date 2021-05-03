@@ -104,10 +104,13 @@ html {
 $font-family-sans-serif: "Calibri", Roboto, Arial, sans-serif;
 $font-family-monospace: "Courier Prime", "Courier New", monospace;
 
-/* Typographic Scale (Perfect Fourth) */
+/* Fluid Typography */
 html {
-  font-size: 100%;
+  /* Positioning */
+  /* Display and Box model */
+  /* Typography */
   font-size: clamp(#{$min-font-size}, #{$preferred-font-size}, #{$max-font-size});
+  /* Other */
 
   body {
     /* Positioning */
@@ -121,7 +124,11 @@ html {
     /* Other */
 
     p {
+      /* Positioning */
+      /* Display and Box model */
       margin-bottom: 1rem;
+      /* Typography */
+      /* Other */
     }
 
     h1, h2, h3, h4, h5, h6 {
@@ -137,15 +144,22 @@ html {
     }
 
     h1 {
+      /* Positioning */
+      /* Display and Box model */
       margin-top: 0;
+      /* Typography */
       font-size: clamp(
         calc(#{$minor-third} * #{$minor-third} * #{$minor-third} * #{$minor-third} * #{$minor-third} * 1rem),
         3.5072916666666667vw,
         calc(#{$golden-ratio} * #{$golden-ratio} * #{$golden-ratio} * #{$golden-ratio} * #{$golden-ratio} * 1rem)
       );
+      /* Other */
     }
 
     h2 {
+      /* Positioning */
+      /* Display and Box model */
+      /* Typography */
       font-size: clamp(
         calc(#{$minor-third} * #{$minor-third} * #{$minor-third} * #{$minor-third} * 1rem),
         2.63125vw,
@@ -154,39 +168,59 @@ html {
     }
 
     h3 {
+      /* Positioning */
+      /* Display and Box model */
+      /* Typography */
       font-size: clamp(
         calc(#{$minor-third} * #{$minor-third} * #{$minor-third} * 1rem),
         1.973958333333333vw,
         calc(#{$golden-ratio} * #{$golden-ratio} * #{$golden-ratio} * 1rem)
       );
+      /* Other */
     }
 
     h4 {
+      /* Positioning */
+      /* Display and Box model */
+      /* Typography */
       font-size: clamp(
         calc(#{$minor-third} * #{$minor-third} * 1rem),
         1.4807291666666667vw,
         calc(#{$golden-ratio} * #{$golden-ratio} * 1rem)
       );
+      /* Other */
     }
 
     h5 {
+      /* Positioning */
+      /* Display and Box model */
+      /* Typography */
       font-size: clamp(
         calc(#{$minor-third} * 1rem),
         1.1109375vw,
         calc(#{$golden-ratio} * 1rem)
       );
+      /* Other */
     }
 
     h6 {
+      /* Positioning */
+      /* Display and Box model */
+      /* Typography */
       font-size: 1rem;
+      /* Other */
     }
 
     small, .text_small {
+      /* Positioning */
+      /* Display and Box model */
+      /* Typography */
       font-size: clamp(
         calc(1rem / #{$minor-third}),
         0.625vw,
         calc(1rem / #{$golden-ratio})
       );
+      /* Other */
     }
   }
 }
