@@ -515,13 +515,13 @@ html {
     grid-template-columns:
       [first] 1fr;
     grid-template-rows:
-      [hero] minmax(calc(calc(100vh - #{$header-height}) * 0.6), auto)
-      [intro] minmax(calc(calc(100vh - #{$header-height}) * 0.4), auto)
+      [hero] minmax(calc(100vh * 0.65), auto)
+      [intro] minmax(calc(100vh * 0.35), auto)
       [services] minmax(calc(100vh - #{$header-height}), auto)
       [about] minmax(calc(100vh - #{$header-height}), auto)
       [projects] minmax(calc(100vh - #{$header-height}), auto)
       [contact] minmax(calc(100vh - #{$header-height}), auto);
-    margin-top: $header-height;
+    //margin-top: $header-height;
     /* Typography */
     /* Other */
   }
