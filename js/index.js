@@ -104,10 +104,13 @@ docReady(function() {
     }
   }
 
-  // Toggle Menu and Language visibility on window resize
-  window.addEventListener("resize", () => {
-    toggleMenuVisibility();
-  }, true);
+  // Add/Remove Event Listeners for Toggle Menu and Language visibility on window resize
+  const addCollapseMenuListener = () => {
+    window.addEventListener("resize", collapseMenu, true);
+  }
+  const removeCollapseMenuListener = () => {
+    window.removeEventListener("resize", collapseMenu, true);
+  }
 
   // Media Queries
   enquire.register(smallDevices, function () {
@@ -135,6 +138,7 @@ docReady(function() {
   });
 
   enquire.register(extraLargeDevices, function () {
+    removeCollapseMenuListener();
     // Show Menu and Language containers
     show(menu);
     show(language);
@@ -143,6 +147,7 @@ docReady(function() {
   });
 
   enquire.register(highDefDevices, function () {
+    addCollapseMenuListener();
     // Show Menu and Language containers
     show(menu);
     show(language);
