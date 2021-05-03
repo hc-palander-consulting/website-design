@@ -871,7 +871,7 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: $fluid-padding;
+    padding: $gap-width $fluid-horizontal-padding;
     /* Typography */
     /* Other */
 
@@ -1214,8 +1214,7 @@ html {
         /* Positioning */
         /* Display and Box model */
         margin: 0;
-        max-width: calc(#{$column-width} * 6 + calc(#{$gap-width} * 5));
-        padding: $gap-width;
+        padding: $gap-width $fluid-horizontal-padding;
         /* Typography */
         color: $white-100;
         text-transform: uppercase;
@@ -1797,7 +1796,7 @@ html {
   section.content {
     /* Positioning */
     /* Display and Box model */
-    padding: $fluid-padding;
+    padding: $gap-width $fluid-horizontal-padding;
     /* Typography */
     /* Other */
 
