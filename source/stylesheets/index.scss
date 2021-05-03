@@ -1215,7 +1215,7 @@ html {
         /* Positioning */
         /* Display and Box model */
         margin: 0;
-        margin-top: calc(#{$gap-width} * 2 );
+        margin: calc((#{$header-height} * 2) - #{$gap-width}) 0;
         max-width: calc(#{$column-width} * 8 + calc(#{$gap-width} * 7));
         padding: $gap-width $fluid-horizontal-padding;
         /* Typography */
