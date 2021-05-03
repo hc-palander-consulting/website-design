@@ -485,7 +485,7 @@ html {
     /* Typography */
     /* Other */
     filter: brightness(0) invert(1);
-    transition: none;
+    //transition: none;
 
     &.active {
       /* Positioning */
@@ -495,7 +495,7 @@ html {
       /* Typography */
       /* Other */
       filter: initial;
-      transition: $standard-animation;
+      //transition: $standard-animation;
     }
   }
 
