@@ -109,6 +109,7 @@ html {
   /* Positioning */
   /* Display and Box model */
   /* Typography */
+  font-size: 100%; /* Fallback */
   font-size: clamp(#{$min-font-size}, #{$preferred-font-size}, #{$max-font-size});
   /* Other */
 
