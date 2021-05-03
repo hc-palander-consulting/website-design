@@ -81,10 +81,11 @@ docReady(function() {
     const menuHeightRounded = menu.offsetHeight;
 
     // 2. Calculate Initial Menu Height
+    const body = document.querySelector("body");
     const docFontSize = window.getComputedStyle(body).getPropertyValue('font-size');
     const fontSize = parseFloat(docFontSize);
     const minMenuHeight = fontSize * 3.75; // initial header height is 3.75rem or 60px when font is 16px
-    const minMenuHeightRounded = Math.round(minMenuHeight) + 1; // add 1 px because the browser calculates slightly differently
+    const minMenuHeightRounded = Math.round(minMenuHeight) + 1; // add 1 px extra to be safe because the browser gives a slightly different height
 
     // 3. Hide menu and language if menu is taller than it's initial height and it's not hidden, show menu button instead
     if (menuHeightRounded > minMenuHeightRounded || menuHeightRounded === 0) {
