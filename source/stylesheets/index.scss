@@ -39,6 +39,7 @@ $black-70: rgba(0, 0, 0, 0.7);
 $black-80: rgba(0, 0, 0, 0.8);
 
 /* Whites */
+$white-0: rgba(255, 255, 255, 0);
 $white-10: rgba(255, 255, 255, 0.1);
 $white-20: rgba(255, 255, 255, 0.2);
 $white-40: rgba(255, 255, 255, 0.4);
@@ -188,6 +189,219 @@ html {
 /*=====================*/
 /* STRUCTURE           */
 /*=====================*/
+#mobile-navigation {
+  /* Positioning */
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  /* Display and Box model */
+  background-color: $black-100;
+  display: grid;
+  grid-template-areas:
+    "close-button"
+    "mobile-menu"
+    "mobile-language";
+  grid-template-rows:
+    [close-button] auto
+    [mobile-menu] 1fr
+    [mobile-language] auto;
+  gap: $gap-width;
+  height: 100vh;
+  padding: 0 $fluid-horizontal-padding $gap-width;
+  width: 100%;
+  /* Typography */
+  /* Other */
+
+  &.hidden {
+    /* Positioning */
+    /* Display and Box model */
+    display: none;
+    /* Typography */
+    /* Other */
+  }
+
+  a.link {
+    /* Positioning */
+    /* Display and Box model */
+    border-width: $border-width;
+    border-style: solid;
+    border-color: $white-0;
+    padding: calc(#{$gap-width} / 2) calc(#{$gap-width} / 2) 0.5625rem;
+    /* Typography */
+    color: $white-100;
+    font-family: $font-family-monospace;
+    font-size: clamp(
+      calc(#{$minor-third} * #{$minor-third} * #{$minor-third} * #{$minor-third} * 1rem),
+      calc(#{strip-unit($perfect-fourth * $perfect-fourth * $perfect-fourth * $perfect-fourth)} * #{strip-unit(1rem)} / #{strip-unit(100vw)} * 100  * 1vw),
+      calc(#{$golden-ratio} * #{$golden-ratio} * #{$golden-ratio} * #{$golden-ratio} * 1rem)
+    );
+    line-height: 1;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    /* Other */
+
+    &:hover {
+      /* Positioning */
+      /* Display and Box model */
+      border-color: $white-100;
+      border-style: solid;
+      /* Typography */
+      color: $white-100;
+      /* Other */
+      cursor: pointer;
+    }
+  }
+
+  #close-button {
+    /* Positioning */
+    /* Display and Box model */
+    align-items: center;
+    display: flex;
+    grid-area: close-button;
+    height: $header-height;
+    justify-content: flex-end;
+    width: 100%;
+    /* Typography */
+    /* Other */
+
+    .button {
+      /* Positioning */
+      /* Display and Box model */
+      border-width: $border-width;
+      border-style: solid;
+      border-color: $white-0;
+      padding: calc(#{$gap-width} / 2) calc(#{$gap-width} / 2) 0.5625rem;
+      display: block;
+      /* Typography */
+      /* Other */
+
+      &:hover {
+        /* Positioning */
+        /* Display and Box model */
+        border-color: $white-100;
+        border-style: solid;
+        /* Typography */
+        color: $white-100;
+        /* Other */
+        cursor: pointer;
+      }
+
+      span.icon {
+        /* Positioning */
+        /* Display and Box model */
+        align-items: center;
+        display: flex; /* make inline-block to have control over height */
+        flex-direction: column;
+        width: 1.75rem;
+        /* Typography */
+        color: $white-100;
+        font-size: 1.75rem;
+        line-height: 0;
+        /* Other */
+      }
+    }
+  }
+
+  #mobile-menu {
+    /* Positioning */
+    /* Display and Box model */
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    grid-area: mobile-menu;
+    justify-content: center;
+    /* Typography */
+    /* Other */
+
+    a.link {
+      /* Positioning */
+      /* Display and Box model */
+      margin-bottom: $gap-width;
+      /* Typography */
+      /* Other */
+
+      &:hover {
+        /* Positioning */
+        /* Display and Box model */
+        border-color: $white-100;
+        /* Typography */
+        /* Other */
+        cursor: pointer;
+      }
+
+      &.selected {
+        /* Positioning */
+        /* Display and Box model */
+        background: $white-10;
+        background-clip: padding-box;
+        color: $white-50;
+        /* Typography */
+        /* Other */
+
+        &:hover {
+          /* Positioning */
+          /* Display and Box model */
+          border-color: $white-10;
+          /* Typography */
+          /* Other */
+          cursor: default;
+        }
+      }
+    }
+  }
+
+  #mobile-language {
+    /* Positioning */
+    /* Display and Box model */
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    grid-area: mobile-language;
+    justify-content: center;
+    /* Typography */
+    /* Other */
+
+    a.link {
+      /* Positioning */
+      /* Display and Box model */
+      border-color: $white-10;
+      width: 100%;
+      /* Typography */
+      /* Other */
+
+      &:hover {
+        /* Positioning */
+        /* Display and Box model */
+        border-color: $white-100;
+        /* Typography */
+        /* Other */
+        cursor: pointer;
+      }
+
+      &.selected {
+        /* Positioning */
+        /* Display and Box model */
+        background: $white-10;
+        background-clip: padding-box;
+        color: $white-50;
+        /* Typography */
+        /* Other */
+
+        &:hover {
+          /* Positioning */
+          /* Display and Box model */
+          border-color: $white-10;
+          /* Typography */
+          /* Other */
+          cursor: default;
+        }
+      }
+    }
+  }
+}
+
 #container {
   /* Positioning */
   /* Display and Box model */

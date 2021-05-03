@@ -14,7 +14,11 @@ docReady(function() {
   // Common Vars
   const scrollHeight = 100;
   // Mobile Elements
+  const toggles = document.querySelectorAll(".toggle");
   const menuButton = document.getElementById("menu-button");
+  const mobileNav = document.getElementById("mobile-navigation");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const mobileLanguage = document.getElementById("mobile-language");
   // Desktop Elements
   const header = document.getElementById("header");
   const menu = document.getElementById("menu");
@@ -27,6 +31,12 @@ docReady(function() {
   const visible = element => element.classList.remove("invisible");
   const invisible = element => element.classList.add("invisible");
 
+  // Move Elements from one container to another
+  const moveItems = (initial_container, target_container) => {
+    const elements = Array.from(initial_container.children);
+    elements.forEach(element => target_container.appendChild(element));
+  }
+
   // Fade Header on Scroll
   window.addEventListener("scroll", () => {
     if (window.pageYOffset > scrollHeight) {
@@ -35,6 +45,28 @@ docReady(function() {
       header.classList.remove("active");
     }
   });
+
+  // Toggle Mobile Navigation
+  toggles.forEach(button =>
+    button.addEventListener("click", () => {
+      // If mobile navigation is hidden and the menu button is visible
+      if (mobileNav.classList.contains("hidden") && !menuButton.classList.contains("hidden")) {
+        // 1. Move Menu Items into the Mobile Navigation
+        moveItems(menu, mobileMenu);
+        moveItems(language, mobileLanguage);
+        // 2. Show Mobile Navigation
+        show(mobileNav);
+      } else {
+        // 1. Move Menu Items into the Desktop Navigation
+        moveItems(mobileMenu, menu);
+        moveItems(mobileLanguage, language);
+        // 2. Toggle menu visibility
+        toggleMenuVisibility();
+        // 3. Hide Mobile Navigation
+        hide(mobileNav);
+      }
+    })
+  );
 
   // Toggle Menu and Language visibility
   const toggleMenuVisibility = () => {
