@@ -59,8 +59,7 @@ $header-height: calc(#{$gap-width} * 2 + #{$nav-height}); /* padding (top + bott
 $fluid-horizontal-padding: clamp(#{$gap-width}, 10%, calc(#{$column-width} + (#{$gap-width} / 2)));
 
 /* Resolutions */
-$mobile-width: 20rem; /* 320px */
-$tablet-width: 48rem;/* 768px */
+$large-devices: 62rem; /* 992 */
 $full-hd-width: 120rem; /* 1920 (Full HD) */
 $two-k-width: 128rem; /* 2048 x 1080 (2k) */
 
@@ -299,6 +298,15 @@ html {
 /*=====================*/
 #header {
 
+  a.link {
+    /* Positioning */
+    /* Display and Box model */
+    /* Typography */
+    color: $black-100;
+    text-decoration: none;
+    /* Other */
+  }
+
   #logo {
     /* Positioning */
     /* Display and Box model */
@@ -313,15 +321,14 @@ html {
       align-items: center;
       display: flex;
       /* Typography */
-      color: $black-100;
       line-height: 0;
-      text-decoration: none;
       /* Other */
 
       .logomark {
         /* Positioning */
         /* Display and Box model */
         margin-right: calc(#{$gap-width} / 2);
+        width: 3.75em;
         /* Typography */
         /* Other */
       }
@@ -389,46 +396,25 @@ html {
   #navigation {
     /* Positioning */
     /* Display and Box model */
-    align-content: center;
-    display: none;
+    display: flex;
     grid-area: navigation;
-    grid-gap: $gap-width;
-    grid-template-columns:
-      repeat(
-        auto-fit,
-        $column-width
-      );
-    grid-template-rows:
-      [first] auto;
-    justify-content: end;
     width: 100%;
     /* Typography */
     /* Other */
-
-    @media screen and (min-width: $tablet-width) {
-      /* Positioning */
-      /* Display and Box model */
-      display: grid;
-      /* Typography */
-      /* Other */
-    }
 
     a.link {
       /* Positioning */
       /* Display and Box model */
       border-width: $border-width;
       border-style: solid;
-      border-color: $white-100;
-      min-width: $column-width;
+      border-color: $black-0;
       padding: calc(#{$gap-width} / 2) calc(#{$gap-width} / 2) 0.5625rem;
       /* Typography */
-      color:  $black-100;
       font-family: $font-family-monospace;
       font-size: 0.8125rem;
       font-weight: 700;
       line-height: 1;
       text-align: center;
-      text-decoration: none;
       text-transform: uppercase;
       /* Other */
 
@@ -443,70 +429,180 @@ html {
         cursor: pointer;
       }
     }
-  }
 
-  #language {
-    /* Positioning */
-    /* Display and Box model */
-    align-items: center;
-    display: none;
-    flex-direction: row;
-    grid-area: language;
-    /* Typography */
-    /* Other */
-
-    @media screen and (min-width: $tablet-width) {
+    #menu {
       /* Positioning */
       /* Display and Box model */
-      display: flex;
+      align-content: center;
+      display: grid;
+      gap: $gap-width;
+      grid-template-columns:
+        repeat(
+          auto-fit,
+          $column-width
+        );
+      grid-template-rows:
+        [first] auto;
+      justify-content: end;
+      margin-right: $gap-width;
+      visibility: visible;
+      width: 100%;
       /* Typography */
-      /* Other */
-    }
-
-    a.link {
-      /* Positioning */
-      /* Display and Box model */
-      border-width: $border-width;
-      border-style: solid;
-      border-color: $black-10;
-      min-width: calc(#{$column-width} / 2);
-      padding: calc(#{$gap-width} / 2) calc(#{$gap-width} / 2) 0.5625rem;
-      /* Typography */
-      color:  $black-100;
-      font-family: $font-family-monospace;
-      font-size: 0.8125rem;
-      font-weight: 700;
-      line-height: 1;
-      text-align: center;
-      text-decoration: none;
-      text-transform: uppercase;
+      line-height: 0;
       /* Other */
 
-      &:hover {
+      a.link {
         /* Positioning */
         /* Display and Box model */
-        border-color: $black-100;
+        min-width: $column-width;
         /* Typography */
         /* Other */
-        cursor: pointer;
       }
 
-      &.selected {
+      &.hidden {
         /* Positioning */
         /* Display and Box model */
-        background: $black-10;
-        background-clip: padding-box;
-        color: $black-50;
+        display: none;
+        /* Typography */
+        /* Other */
+      }
+
+      &.invisible {
+        /* Positioning */
+        /* Display and Box model */
+        visibility: hidden;
+        /* Typography */
+        /* Other */
+      }
+
+    }
+
+    #language {
+      /* Positioning */
+      /* Display and Box model */
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      grid-area: language;
+      visibility: visible;
+      /* Typography */
+      /* Other */
+
+      &.hidden {
+        /* Positioning */
+        /* Display and Box model */
+        display: none;
+        /* Typography */
+        /* Other */
+      }
+
+      &.invisible {
+        /* Positioning */
+        /* Display and Box model */
+        visibility: hidden;
+        /* Typography */
+        /* Other */
+      }
+
+      a.link {
+        /* Positioning */
+        /* Display and Box model */
+        border-color: $black-10;
+        min-width: calc(#{$column-width} / 2);
+        padding: calc(#{$gap-width} / 2) calc(#{$gap-width} / 2) 0.5625rem;
         /* Typography */
         /* Other */
 
         &:hover {
           /* Positioning */
           /* Display and Box model */
-          border-color: $black-10;
+          border-color: $black-100;
           /* Typography */
           /* Other */
-          cursor: default;
+          cursor: pointer;
+        }
+
+        &.selected {
+          /* Positioning */
+          /* Display and Box model */
+          background: $black-10;
+          background-clip: padding-box;
+          color: $black-50;
+          /* Typography */
+          /* Other */
+
+          &:hover {
+            /* Positioning */
+            /* Display and Box model */
+            border-color: $black-10;
+            /* Typography */
+            /* Other */
+            cursor: default;
+          }
+        }
+      }
+    }
+
+    #menu-button {
+      /* Positioning */
+      /* Display and Box model */
+      align-items: flex-start;
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 0.28125em; // adjust to match close button position
+      width: 100%;
+      /* Typography */
+      /* Other */
+
+      @media screen and (min-width: $large-devices) {
+        /* Positioning */
+        /* Display and Box model */
+        width: auto;
+        /* Typography */
+        /* Other */
+      }
+
+      &.hidden {
+        /* Positioning */
+        /* Display and Box model */
+        display: none;
+        /* Typography */
+        /* Other */
+      }
+
+      .button {
+        /* Positioning */
+        /* Display and Box model */
+        border-width: $border-width;
+        border-style: solid;
+        border-color: $black-0;
+        padding: calc(#{$gap-width} / 2) calc(#{$gap-width} / 2) 0.5625rem;
+        display: block;
+        /* Typography */
+        /* Other */
+
+        &:hover {
+          /* Positioning */
+          /* Display and Box model */
+          border-color: $black-100;
+          border-style: solid;
+          /* Typography */
+          color: $black-100;
+          /* Other */
+          cursor: pointer;
+        }
+
+        span.icon {
+          /* Positioning */
+          /* Display and Box model */
+          align-items: center;
+          display: flex; /* make inline-block to have control over height */
+          flex-direction: column;
+          width: 1.75rem;
+          /* Typography */
+          font-size: 1.75rem;
+          line-height: 0;
+          /* Other */
         }
       }
     }
