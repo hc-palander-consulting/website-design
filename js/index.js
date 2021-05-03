@@ -67,7 +67,7 @@ docReady(function() {
         moveItems(mobileMenu, menu);
         moveItems(mobileLanguage, language);
         // 2. Toggle menu visibility
-        toggleMenuVisibility();
+        collapseMenu();
         // 3. Hide Mobile Navigation
         hide(mobileNav);
       }
@@ -75,7 +75,7 @@ docReady(function() {
   );
 
   // Toggle Menu and Language visibility
-  const toggleMenuVisibility = () => {
+  const collapseMenu = () => {
     // 1. Get Current Menu Height
     //const menuHeight = menu.getBoundingClientRect().height;
     const menuHeightRounded = menu.offsetHeight;
@@ -139,7 +139,7 @@ docReady(function() {
     show(menu);
     show(language);
     // Check if the Menu can fit in the Navigation container and make visible
-    toggleMenuVisibility();
+    collapseMenu();
   });
 
   enquire.register(highDefDevices, function () {
@@ -147,7 +147,7 @@ docReady(function() {
     show(menu);
     show(language);
     // Check if the Menu can fit in the Navigation container and make visible
-    toggleMenuVisibility();
+    collapseMenu();
   });
 });
 
