@@ -1925,78 +1925,71 @@ html {
 
   #company-info {
 
-    ul.list {
+    table.list {
+      /* Positioning */
+      /* Display and Box model */
+      border-collapse: collapse;
+      /* Typography */
+      /* Other */
 
-      li {
+      tr {
         /* Positioning */
         /* Display and Box model */
         display: flex;
-        flex-direction: row;
         /* Typography */
         /* Other */
 
-        &:first-child {
-
-          .label {
-            /* Positioning */
-            /* Display and Box model */
-            border-width: $border-width 0 $border-width $border-width;
-            padding: calc(1rem * 1.75 / 2 - #{$border-width});
-            /* Typography */
-            /* Other */
-          }
-
-          .info {
-            /* Positioning */
-            /* Display and Box model */
-            border-width: $border-width;
-            padding: calc(1rem * 1.75 / 2 - #{$border-width});
-            /* Typography */
-            /* Other */
-          }
-        }
-
         &:last-child {
 
-          .label {
+          td {
             /* Positioning */
             /* Display and Box model */
-            border-width: 0 0 $border-width $border-width;
-            padding: calc(1rem * 1.75 / 2 - calc(#{$border-width} / 2));
-            /* Typography */
-            /* Other */
-          }
-
-          .info {
-            /* Positioning */
-            /* Display and Box model */
-            border-width: 0 $border-width $border-width $border-width;
-            padding: calc(1rem * 1.75 / 2 - calc(#{$border-width} / 2));
+            border-bottom: $border-width;
+            border-style: solid;
             /* Typography */
             /* Other */
           }
         }
 
-        .label {
+        td {
           /* Positioning */
           /* Display and Box model */
-          background-color: $white-10;
-          border-color: $white-20;
           border-style: solid;
-          min-width: $column-width;
+          border-width: $border-width 0 0 $border-width;
           /* Typography */
-          font-weight: 700;
+          color: $white-50;
           /* Other */
-        }
 
-        .info {
-          /* Positioning */
-          /* Display and Box model */
-          border-color: $white-20;
-          border-style: solid;
-          min-width: calc(#{$column-width} + #{$gap-width});
-          /* Typography */
-          /* Other */
+          &:last-child  {
+            /* Positioning */
+            /* Display and Box model */
+            border-right: $border-width;
+            border-style: solid;
+            /* Typography */
+            /* Other */
+          }
+
+          &.label {
+            /* Positioning */
+            /* Display and Box model */
+            border-color: $white-10;
+            background-color: $white-10;
+            min-width: $column-width;
+            padding: calc(1rem * 1.75 / 2 - #{$border-width});
+            /* Typography */
+            font-weight: 700;
+            /* Other */
+          }
+
+          &.info {
+            /* Positioning */
+            /* Display and Box model */
+            border-color: $white-20;
+            min-width: calc(#{$column-width} + #{$gap-width});
+            padding: calc(1rem * 1.75 / 2 - #{$border-width});
+            /* Typography */
+            /* Other */
+          }
         }
       }
     }
@@ -2012,7 +2005,7 @@ html {
       grid-template-columns:
         repeat(
           auto-fit,
-          calc(#{$column-width} * 2 + #{$gap-width})
+          $column-width
         );
       /* Typography */
       /* Other */
@@ -2047,7 +2040,8 @@ html {
             /* Positioning */
             /* Display and Box model */
             border: $border-width solid $white-20;
-            max-width: calc(#{$column-width} * 2 + #{$gap-width});
+            max-width: calc(#{$column-width});
+            padding: $gap-width;
             /* Typography */
             /* Other */
 
