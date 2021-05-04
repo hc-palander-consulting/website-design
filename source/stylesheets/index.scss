@@ -1652,15 +1652,15 @@ html {
             .link {
             /* Positioning */
             /* Display and Box model */
-            width: 100%;
             border: $border-width solid $black-20;
             padding: calc(#{$gap-width} / 2) calc(#{$gap-width} / 2) 0.5625rem;
+            width: 100%;
             /* Typography */
             font-family: $font-family-monospace;
             font-size: 0.8125rem;
             font-weight: 700;
-            text-transform: uppercase;
             text-align: center;
+            text-transform: uppercase;
             /* Other */
 
               &:hover {
