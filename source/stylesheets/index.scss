@@ -1698,6 +1698,7 @@ html {
         grid-template-columns: 1fr;
         width: 100%;
         /* Typography */
+        font-style: normal;
         /* Other */
 
         @media screen and (min-width: $medium-devices) {
@@ -1748,10 +1749,10 @@ html {
             justify-self: center;
             margin-bottom: $gap-width;
             padding-bottom: $gap-width;
-            width: 3.5rem;
+            width: 2.625rem;
             /* Typography */
             color: $black-50;
-            font-size: 3.5rem;
+            font-size: 2.625rem;
             line-height: 0;
             /* Other */
 
@@ -1773,11 +1774,11 @@ html {
 
             .title {
 
-              h4 {
+              h5 {
                 /* Positioning */
                 /* Display and Box model */
                 /* Typography */
-                margin: 0;
+                margin-top: 0;
                 text-align: center;
                 /* Other */
               }
@@ -1791,13 +1792,33 @@ html {
             /* Typography */
             /* Other */
 
-            p {
+            .link {
               /* Positioning */
               /* Display and Box model */
-              margin: 0;
+              border: $border-width solid $black-20;
+              display: block;
+              padding: calc(#{$gap-width} / 2) calc(#{$gap-width} / 2) 0.5625rem;
+              width: 100%;
               /* Typography */
+              color: $black-100;
+              font-family: $font-family-monospace;
+              font-size: 0.8125rem;
+              font-weight: 700;
               text-align: center;
+              text-decoration: none;
+              text-transform: uppercase;
               /* Other */
+
+              &:hover {
+                /* Positioning */
+                /* Display and Box model */
+                border-color: $black-100;
+                border-style: solid;
+                /* Typography */
+                color: $black-100;
+                /* Other */
+                cursor: pointer;
+              }
             }
           }
         }
