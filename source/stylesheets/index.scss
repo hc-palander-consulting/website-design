@@ -565,13 +565,16 @@ html {
 /*=====================*/
 #header {
 
-  a.link {
-    /* Positioning */
-    /* Display and Box model */
-    /* Typography */
-    color: $black-100;
-    text-decoration: none;
-    /* Other */
+  .link {
+
+    a {
+      /* Positioning */
+      /* Display and Box model */
+      /* Typography */
+      color: $black-100;
+      text-decoration: none;
+      /* Other */
+    }
   }
 
   #logo {
@@ -582,70 +585,73 @@ html {
     /* Typography */
     /* Other */
 
-    a.link {
-      /* Positioning */
-      /* Display and Box model */
-      align-items: center;
-      display: flex;
-      /* Typography */
-      line-height: 0;
-      /* Other */
+    &.link {
 
-      .logomark {
+      a {
         /* Positioning */
         /* Display and Box model */
-        margin-right: calc(#{$gap-width} / 2);
-        width: 3.75em;
+        align-items: center;
+        display: flex;
         /* Typography */
-        /* Other */
-      }
-
-      .logotype {
-        /* Positioning */
-        /* Display and Box model */
-        margin-top: calc(#{$gap-width} / 4);
-        /* Typography */
-        font-family: Courier, "Courier Prime";
+        line-height: 0;
         /* Other */
 
-        .name {
+        .logomark {
           /* Positioning */
           /* Display and Box model */
-          display: none;
+          margin-right: calc(#{$gap-width} / 2);
+          width: 3.75em;
           /* Typography */
-          font-family: inherit;
-          font-size: 1.4375rem;
-          font-weight: 700;
-          line-height: 1;
           /* Other */
-
-          @media screen and (min-width: $medium-devices) {
-            /* Positioning */
-            /* Display and Box model */
-            display: block;
-            /* Typography */
-            /* Other */
-          }
         }
 
-        .tagline {
+        .logotype {
           /* Positioning */
           /* Display and Box model */
-          display: none;
           margin-top: calc(#{$gap-width} / 4);
           /* Typography */
-          font-family: inherit;
-          font-size: 1.0625rem;
-          font-weight: 700;
-          line-height: 1;
+          font-family: Courier, "Courier Prime";
           /* Other */
 
-          @media screen and (min-width: $medium-devices) {
+          .name {
             /* Positioning */
             /* Display and Box model */
-            display: block;
+            display: none;
             /* Typography */
+            font-family: inherit;
+            font-size: 1.4375rem;
+            font-weight: 700;
+            line-height: 1;
             /* Other */
+
+            @media screen and (min-width: $medium-devices) {
+              /* Positioning */
+              /* Display and Box model */
+              display: block;
+              /* Typography */
+              /* Other */
+            }
+          }
+
+          .tagline {
+            /* Positioning */
+            /* Display and Box model */
+            display: none;
+            margin-top: calc(#{$gap-width} / 4);
+            /* Typography */
+            font-family: inherit;
+            font-size: 1.0625rem;
+            font-weight: 700;
+            line-height: 1;
+            /* Other */
+
+            @media screen and (min-width: $medium-devices) {
+              /* Positioning */
+              /* Display and Box model */
+              display: block;
+              /* Typography */
+              /* Other */
+            }
           }
         }
       }
@@ -669,14 +675,13 @@ html {
     /* Typography */
     /* Other */
 
-    a.link {
+    .link {
       /* Positioning */
       /* Display and Box model */
       border-width: $border-width;
       border-style: solid;
       border-color: $black-0;
       //@include border-box-shadow(none, 0);
-      padding: calc(#{$gap-width} / 2) calc(#{$gap-width} / 2) 0.5625rem;
       /* Typography */
       font-family: $font-family-monospace;
       font-size: 0.8125rem;
@@ -717,16 +722,7 @@ html {
       visibility: visible;
       width: 100%;
       /* Typography */
-      line-height: 0;
       /* Other */
-
-      a.link {
-        /* Positioning */
-        /* Display and Box model */
-        min-width: $column-width;
-        /* Typography */
-        /* Other */
-      }
 
       &.hidden {
         /* Positioning */
@@ -744,6 +740,24 @@ html {
         /* Other */
       }
 
+      li.link {
+        /* Positioning */
+        /* Display and Box model */
+        display: block;
+        min-width: $column-width;
+        /* Typography */
+        /* Other */
+
+        a {
+          /* Positioning */
+          /* Display and Box model */
+          display: block;
+          padding: calc(#{$gap-width} / 2) calc(#{$gap-width} / 2) 0.5625rem;
+          width: 100%;
+          /* Typography */
+          /* Other */
+        }
+      }
     }
 
     #language {
@@ -773,14 +787,14 @@ html {
         /* Other */
       }
 
-      a.link {
+      li.link {
         /* Positioning */
         /* Display and Box model */
+        display: block;
         border-color: $black-10;
         //@include border-box-shadow($black-10, $border-width);
         height: 2.25rem;
         min-width: calc(#{$column-width} / 2);
-        padding: calc(#{$gap-width} / 2) calc(#{$gap-width} / 2) 0.5625rem;
         /* Typography */
         /* Other */
 
@@ -803,7 +817,6 @@ html {
           background: $black-10;
           //background-clip: padding-box;
           height: 2.25rem;
-          padding: calc((#{$gap-width} / 2) + #{$border-width}) calc((#{$gap-width} / 2) + #{$border-width}) calc(0.5625rem + #{$border-width});
           /* Typography */
           color: $black-50;
           /* Other */
@@ -815,8 +828,35 @@ html {
             //@include border-box-shadow($black-0, $border-width);
             /* Typography */
             /* Other */
-            cursor: default;
+
+            a {
+              /* Positioning */
+              /* Display and Box model */
+              cursor: default;
+              /* Typography */
+              /* Other */
+            }
           }
+
+          a {
+            /* Positioning */
+            /* Display and Box model */
+            display: block;
+            padding: calc((#{$gap-width} / 2) + #{$border-width}) calc((#{$gap-width} / 2) + #{$border-width}) calc(0.5625rem + #{$border-width});
+            width: 100%;
+            /* Typography */
+            /* Other */
+          }
+        }
+
+        a {
+          /* Positioning */
+          /* Display and Box model */
+          display: block;
+          padding: calc(#{$gap-width} / 2) calc(#{$gap-width} / 2) 0.5625rem;
+          width: 100%;
+          /* Typography */
+          /* Other */
         }
       }
     }
