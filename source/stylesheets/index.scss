@@ -274,13 +274,14 @@ html {
     /* Other */
   }
 
-  a.link {
+  .link {
     /* Positioning */
     /* Display and Box model */
     border-width: $border-width;
     border-style: solid;
     border-color: $white-0;
-    padding: calc(#{$gap-width} / 2) calc(#{$gap-width} / 2) 0.5625rem;
+    display: block;
+    height: auto;
     /* Typography */
     color: $white-100;
     font-family: $font-family-monospace;
@@ -289,7 +290,6 @@ html {
       calc(#{strip-unit($perfect-fourth * $perfect-fourth * $perfect-fourth * $perfect-fourth)} * #{strip-unit(1rem)} / #{strip-unit(100vw)} * 100  * 1vw),
       calc(#{$golden-ratio} * #{$golden-ratio} * #{$golden-ratio} * #{$golden-ratio} * 1rem)
     );
-    line-height: 1;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
@@ -304,6 +304,19 @@ html {
       color: $white-100;
       /* Other */
       cursor: pointer;
+    }
+
+    a {
+      /* Positioning */
+      /* Display and Box model */
+      display: block;
+      line-height: 1em;
+      padding: calc(#{$gap-width} / 2) calc(#{$gap-width} / 2) 0.5625rem;
+      width: 100%;
+      /* Typography */
+      color: $white-100;
+      text-decoration: none;
+      /* Other */
     }
   }
 
@@ -368,7 +381,7 @@ html {
     /* Typography */
     /* Other */
 
-    a.link {
+    .link {
       /* Positioning */
       /* Display and Box model */
       margin-bottom: $gap-width;
@@ -382,25 +395,6 @@ html {
         /* Typography */
         /* Other */
         cursor: pointer;
-      }
-
-      &.selected {
-        /* Positioning */
-        /* Display and Box model */
-        background: $white-10;
-        background-clip: padding-box;
-        color: $white-50;
-        /* Typography */
-        /* Other */
-
-        &:hover {
-          /* Positioning */
-          /* Display and Box model */
-          border-color: $white-10;
-          /* Typography */
-          /* Other */
-          cursor: default;
-        }
       }
     }
   }
@@ -416,7 +410,7 @@ html {
     /* Typography */
     /* Other */
 
-    a.link {
+    .link {
       /* Positioning */
       /* Display and Box model */
       border-color: $white-10;
@@ -436,10 +430,14 @@ html {
       &.selected {
         /* Positioning */
         /* Display and Box model */
+        //border-color: $black-10;
+        border: none;
+        //@include border-box-shadow($black-0, $border-width);
         background: $white-10;
-        background-clip: padding-box;
-        color: $white-50;
+        //background-clip: padding-box;
+        height: auto;
         /* Typography */
+        color: $white-50;
         /* Other */
 
         &:hover {
@@ -448,7 +446,24 @@ html {
           border-color: $white-10;
           /* Typography */
           /* Other */
-          cursor: default;
+
+          a {
+            /* Positioning */
+            /* Display and Box model */
+            cursor: default;
+            /* Typography */
+            /* Other */
+          }
+        }
+
+        a {
+          /* Positioning */
+          /* Display and Box model */
+          display: block;
+          padding: calc((#{$gap-width} / 2) + #{$border-width}) calc((#{$gap-width} / 2) + #{$border-width}) calc(0.5625rem + #{$border-width});
+          width: 100%;
+          /* Typography */
+          /* Other */
         }
       }
     }
@@ -621,7 +636,7 @@ html {
             font-family: inherit;
             font-size: 1.4375rem;
             font-weight: 700;
-            line-height: 1;
+            line-height: 1em;
             /* Other */
 
             @media screen and (min-width: $medium-devices) {
@@ -642,7 +657,7 @@ html {
             font-family: inherit;
             font-size: 1.0625rem;
             font-weight: 700;
-            line-height: 1;
+            line-height: 1em;
             /* Other */
 
             @media screen and (min-width: $medium-devices) {
@@ -686,7 +701,7 @@ html {
       font-family: $font-family-monospace;
       font-size: 0.8125rem;
       font-weight: 700;
-      line-height: 1;
+      line-height: 0;
       text-align: center;
       text-transform: uppercase;
       /* Other */
@@ -752,6 +767,7 @@ html {
           /* Positioning */
           /* Display and Box model */
           display: block;
+          line-height: 1em;
           padding: calc(#{$gap-width} / 2) calc(#{$gap-width} / 2) 0.5625rem;
           width: 100%;
           /* Typography */
@@ -853,6 +869,7 @@ html {
           /* Positioning */
           /* Display and Box model */
           display: block;
+          line-height: 1em;
           padding: calc(#{$gap-width} / 2) calc(#{$gap-width} / 2) 0.5625rem;
           width: 100%;
           /* Typography */
