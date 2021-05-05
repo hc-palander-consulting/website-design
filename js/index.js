@@ -130,6 +130,8 @@ docReady(function() {
   });
 
   enquire.register(largeDevices, function () {
+    //Remove Event Listener for menu collapsing on resize window
+    removeCollapseMenuListener();
     // Hide Menu and Language containers
     hide(menu);
     hide(language);
@@ -138,7 +140,8 @@ docReady(function() {
   });
 
   enquire.register(extraLargeDevices, function () {
-    removeCollapseMenuListener();
+    // Add Event Listener for menu collapsing on resize window
+    addCollapseMenuListener();
     // Show Menu and Language containers
     show(menu);
     show(language);
@@ -147,7 +150,6 @@ docReady(function() {
   });
 
   enquire.register(highDefDevices, function () {
-    addCollapseMenuListener();
     // Show Menu and Language containers
     show(menu);
     show(language);
