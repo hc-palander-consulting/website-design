@@ -1866,13 +1866,22 @@ html {
               width: 100%;
               /* Typography */
               color: $black-100;
-              font-family: $font-family-monospace;
-              font-size: 0.8125rem;
-              font-weight: 700;
-              text-align: center;
               text-decoration: none;
-              text-transform: uppercase;
               /* Other */
+
+              p {
+                /* Positioning */
+                /* Display and Box model */
+                margin-bottom: 0;
+                /* Typography */
+                color: $black-100;
+                font-family: $font-family-monospace;
+                font-size: 0.8125rem;
+                font-weight: 700;
+                text-align: center;
+                text-transform: uppercase;
+                /* Other */
+              }
 
               &:hover {
                 /* Positioning */
