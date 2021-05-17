@@ -432,7 +432,6 @@ html {
       &.selected {
         /* Positioning */
         /* Display and Box model */
-        //border-color: $black-10;
         border: none;
         background-color: $white-10;
         height: auto;
@@ -524,7 +523,6 @@ html {
       /* Typography */
       /* Other */
       filter: initial;
-      //transition: $standard-animation;
     }
   }
 
@@ -681,7 +679,6 @@ html {
       border-width: $border-width;
       border-style: solid;
       border-color: $black-0;
-      //@include border-box-shadow(none, 0);
       /* Typography */
       font-family: $font-family-monospace;
       font-size: 0.8125rem;
@@ -696,7 +693,6 @@ html {
         /* Display and Box model */
         border-color: $black-100;
         border-style: solid;
-        //@include border-box-shadow($black-100, $border-width);
         /* Typography */
         color: $black-100;
         /* Other */
@@ -793,7 +789,6 @@ html {
         /* Display and Box model */
         display: block;
         border-color: $black-10;
-        //@include border-box-shadow($black-10, $border-width);
         height: 2.25rem;
         min-width: calc(#{$column-width} / 2);
         /* Typography */
@@ -803,7 +798,6 @@ html {
           /* Positioning */
           /* Display and Box model */
           border-color: $black-100;
-          //@include border-box-shadow($black-100, $border-width);
           /* Typography */
           /* Other */
           cursor: pointer;
@@ -812,7 +806,6 @@ html {
         &.selected {
           /* Positioning */
           /* Display and Box model */
-          //border-color: $black-10;
           border: none;
           background-color: $black-10;
           height: 2.25rem;
@@ -824,7 +817,6 @@ html {
             /* Positioning */
             /* Display and Box model */
             border-color: $black-10;
-            //@include border-box-shadow($black-0, $border-width);
             /* Typography */
             /* Other */
 
@@ -958,7 +950,6 @@ html {
         border-color: $black-40;
         border-style: solid;
         border-width: $border-width;
-        //@include border-box-shadow($black-40, $border-width);
         height:  $header-height;
         min-width: 100%;
         /* Typography */
