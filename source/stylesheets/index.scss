@@ -103,7 +103,7 @@ html {
   word-break: break-word;
   /* Other */
   scroll-behavior: smooth;
-  scroll-padding-top: calc(#{$header-height} - 0.0625rem); // fix the extra px bug in Chrome and Edge
+  scroll-padding-top: $header-height; // fix the extra px bug in Chrome and Edge
 }
 
 /*=====================*/
