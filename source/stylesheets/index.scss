@@ -130,7 +130,7 @@ html {
   body {
     /* Positioning */
     /* Display and Box model */
-    background: $white-100;
+    background-color: $white-100;
     /* Typography */
     font-family: $font-family-sans-serif;
     font-weight: 400;
@@ -433,9 +433,7 @@ html {
         /* Display and Box model */
         //border-color: $black-10;
         border: none;
-        //@include border-box-shadow($black-0, $border-width);
-        background: $white-10;
-        //background-clip: padding-box;
+        background-color: $white-10;
         height: auto;
         /* Typography */
         color: $white-50;
@@ -521,7 +519,7 @@ html {
       /* Positioning */
       /* Display and Box model */
       box-shadow: $box-shadow;
-      background: $white-100;
+      background-color: $white-100;
       /* Typography */
       /* Other */
       filter: initial;
@@ -532,7 +530,7 @@ html {
   #main {
     /* Positioning */
     /* Display and Box model */
-    background: $white-100;
+    background-color: $white-100;
     display: grid;
     grid-area: main;
     grid-template-areas:
@@ -830,9 +828,7 @@ html {
           /* Display and Box model */
           //border-color: $black-10;
           border: none;
-          //@include border-box-shadow($black-0, $border-width);
-          background: $black-10;
-          //background-clip: padding-box;
+          background-color: $black-10;
           height: 2.25rem;
           /* Typography */
           color: $black-50;
