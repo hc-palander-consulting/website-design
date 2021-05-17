@@ -77,6 +77,7 @@ $max-font-size: 0.78125vw; /* (16px / 2048 * 100) */
 /* Filters */
 $light-gray: invert(99%) sepia(5%) saturate(0%) hue-rotate(95deg) brightness(107%) contrast(100%);
 $grayscale: grayscale(100%);
+$inverted: brightness(0) invert(1);
 
 /* Effects */
 $box-shadow: 0.0625rem 0.25rem 0.25rem $black-10;
@@ -513,7 +514,7 @@ html {
     width: 100%;
     /* Typography */
     /* Other */
-    filter: brightness(0) invert(1);
+    filter: $inverted;
     //transition: none;
 
     &.active {
@@ -1899,6 +1900,10 @@ html {
       }
     }
   }
+                  filter: $inverted;
+                  /* Typography */
+                  filter: $inverted;
+                  /* Typography */
 }
 
 #footer {
