@@ -426,7 +426,6 @@ html {
         background-color: $white-10;
         height: auto;
         /* Typography */
-        color: $white-50;
         /* Other */
 
         &:hover {
@@ -452,6 +451,7 @@ html {
           padding: calc((#{$gap-width} / 2) + #{$border-width}) calc((#{$gap-width} / 2) + #{$border-width}) calc(0.5625rem + #{$border-width});
           width: 100%;
           /* Typography */
+          color: $white-50;
           /* Other */
         }
       }
@@ -799,7 +799,6 @@ html {
           background-color: $black-10;
           height: 2.25rem;
           /* Typography */
-          color: $black-50;
           /* Other */
 
           &:hover {
@@ -825,6 +824,7 @@ html {
             padding: calc((#{$gap-width} / 2) + #{$border-width}) calc((#{$gap-width} / 2) + #{$border-width}) calc(0.5625rem + #{$border-width});
             width: 100%;
             /* Typography */
+            color: $black-50;
             /* Other */
           }
         }
