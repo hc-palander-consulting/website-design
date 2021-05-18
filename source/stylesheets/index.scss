@@ -81,16 +81,6 @@ $inverted: brightness(0) invert(1);
 
 /* Effects */
 $box-shadow: 0.0625rem 0.25rem 0.25rem $black-10;
-// $border-box-shadow:
-//   $border-width 0 0 0 $black-100,
-//   0 $border-width 0 0 $black-100,
-//   $border-width $border-width 0 0 $black-100,
-//   $border-width 0 0 0 $black-100 inset,
-//   0 $border-width 0 0 $black-100 inset;
-// @mixin border-box-shadow($color, $border) {
-//   box-shadow: inset 0 0 0 calc(#{$border} * 1.25) $color;
-// }
-
 $dark-top-gradient: linear-gradient(to bottom, $black-100, $black-20);
 $standard-animation: all 0.3s ease-in-out;
 
@@ -104,7 +94,7 @@ html {
   word-break: break-word;
   /* Other */
   scroll-behavior: smooth;
-  scroll-padding-top: $header-height; // fix the extra px bug in Chrome and Edge
+  scroll-padding-top: $header-height;
 }
 
 /*=====================*/
@@ -360,7 +350,7 @@ html {
         /* Positioning */
         /* Display and Box model */
         align-items: center;
-        display: flex; /* make inline-block to have control over height */
+        display: flex;
         flex-direction: column;
         width: 1.75rem;
         /* Typography */
@@ -513,7 +503,6 @@ html {
     /* Typography */
     /* Other */
     filter: $inverted;
-    //transition: none;
 
     &.active {
       /* Positioning */
@@ -906,7 +895,7 @@ html {
           /* Positioning */
           /* Display and Box model */
           align-items: center;
-          display: flex; /* make inline-block to have control over height */
+          display: flex;
           flex-direction: column;
           width: 1.75rem;
           /* Typography */
@@ -2497,7 +2486,6 @@ html {
         /* Positioning */
         /* Display and Box model */
         display: flex;
-        /* make inline-block to have control over height */
         /* Typography */
         height: 1.75rem;
         /* Other */
@@ -2513,7 +2501,7 @@ html {
             /* Positioning */
             /* Display and Box model */
             align-items: center;
-            display: flex; /* make inline-block to have control over height */
+            display: flex;
             flex-direction: column;
             width: 1.75rem;
             /* Typography */
