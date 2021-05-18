@@ -899,6 +899,7 @@ html {
           flex-direction: column;
           width: 1.75rem;
           /* Typography */
+          color: $black-100;
           font-size: 1.75rem;
           line-height: 0;
           /* Other */
@@ -920,6 +921,576 @@ html {
     min-height: calc(100vh - #{$header-height});
     /* Typography */
     /* Other */
+
+    /* ARTICLE TYPES */
+    &.black {
+      /* Positioning */
+      /* Display and Box model */
+      background-color: $black-100;
+      /* Typography */
+      /* Other */
+
+      h1, h2, h3, h4, h5, h6 {
+        /* Positioning */
+        /* Display and Box model */
+        /* Typography */
+        color: $white-100;
+        /* Other */
+      }
+
+      p {
+        /* Positioning */
+        /* Display and Box model */
+        /* Typography */
+        color: $white-70;
+        /* Other */
+      }
+
+      section.header {
+
+        .heading {
+          /* Positioning */
+          /* Display and Box model */
+          border-color: $white-40;
+          /* Typography */
+          /* Other */
+        }
+      }
+
+      section.content {
+
+        .body {
+
+          &.services {
+
+            figure.service {
+              /* Positioning */
+              /* Display and Box model */
+              background-color: $white-10;
+              border-color: $white-20;
+              /* Typography */
+              /* Other */
+
+              .icon {
+                /* Positioning */
+                /* Display and Box model */
+                border-color: $white-20;
+                /* Typography */
+                /* Other */
+
+                img.image {
+                  /* Positioning */
+                  /* Display and Box model */
+                  opacity: 0.5;
+                  filter: $inverted;
+                  /* Typography */
+                  /* Other */
+                }
+              }
+            }
+          }
+
+          &.bios {
+
+            figure.bio {
+
+              .picture {
+                /* Positioning */
+                /* Display and Box model */
+                background-color: $white-10;
+                border-color: $white-20;
+                /* Typography */
+                /* Other */
+              }
+            }
+          }
+
+          &.projects {
+
+            figure.project {
+              /* Positioning */
+              /* Display and Box model */
+              border-color: $white-20;
+              /* Typography */
+              /* Other */
+              background-color: $white-10;
+
+              figcaption.caption {
+                /* Positioning */
+                /* Display and Box model */
+                border-color: $white-20;
+                /* Typography */
+                /* Other */
+              }
+
+              .more {
+
+                .link {
+                /* Positioning */
+                /* Display and Box model */
+                border-color: $white-20;
+                /* Typography */
+                color: $white-100;
+                /* Other */
+
+                  &:hover {
+                    /* Positioning */
+                    /* Display and Box model */
+                    border-color: $white-100;
+                    /* Typography */
+                    color: $white-100;
+                    /* Other */
+                  }
+                }
+              }
+            }
+          }
+
+          &.contacts {
+
+            figure.contact {
+              /* Positioning */
+              /* Display and Box model */
+              background-color: $white-10;
+              border-color: $white-20;
+              /* Typography */
+              /* Other */
+
+              .icon {
+                /* Positioning */
+                /* Display and Box model */
+                border-color: $white-20;
+                /* Typography */
+                color: $white-50;
+                /* Other */
+
+              }
+
+              .text {
+
+                .link {
+                  /* Positioning */
+                  /* Display and Box model */
+                  border-color: $white-20;
+                  /* Typography */
+                  color: $white-100;
+                  /* Other */
+
+                  p {
+                    /* Positioning */
+                    /* Display and Box model */
+                    /* Typography */
+                    color: $white-100;
+                    /* Other */
+                  }
+
+                  &:hover {
+                    /* Positioning */
+                    /* Display and Box model */
+                    border-color: $white-100;
+                    /* Typography */
+                    color: $white-100;
+                    /* Other */
+                  }
+                }
+              }
+            }
+          }
+
+        }
+      }
+
+      section.footer {
+
+        .link {
+
+          .icon {
+
+            .image {
+              /* Positioning */
+              /* Display and Box model */
+              /* Typography */
+              /* Other */
+              filter: $light-gray;
+            }
+          }
+        }
+      }
+    }
+
+    &.dark-gray {
+      /* Positioning */
+      /* Display and Box model */
+      background-color: $black-80;
+      /* Typography */
+      /* Other */
+
+      h1, h2, h3, h4, h5, h6 {
+        /* Positioning */
+        /* Display and Box model */
+        /* Typography */
+        color: $white-100;
+        /* Other */
+      }
+
+      p {
+        /* Positioning */
+        /* Display and Box model */
+        /* Typography */
+        color: $white-70;
+        /* Other */
+      }
+
+      section.header {
+
+        .heading {
+          /* Positioning */
+          /* Display and Box model */
+          border-color: $white-50;
+          /* Typography */
+          /* Other */
+        }
+      }
+
+      section.content {
+
+        .body {
+
+          &.services {
+
+            figure.service {
+              /* Positioning */
+              /* Display and Box model */
+              background-color: $white-10;
+              border-color: $white-20;
+              /* Typography */
+              /* Other */
+
+              .icon {
+                /* Positioning */
+                /* Display and Box model */
+                border-color: $white-20;
+                /* Typography */
+                /* Other */
+
+                img.image {
+                  /* Positioning */
+                  /* Display and Box model */
+                  opacity: 0.5;
+                  filter: $inverted;
+                  /* Typography */
+                  /* Other */
+                }
+              }
+            }
+          }
+
+          &.bios {
+
+            figure.bio {
+
+              .picture {
+                /* Positioning */
+                /* Display and Box model */
+                background-color: $white-10;
+                border-color: $white-20;
+                /* Typography */
+                /* Other */
+              }
+            }
+          }
+
+          &.projects {
+
+            figure.project {
+              /* Positioning */
+              /* Display and Box model */
+              border-color: $white-20;
+              /* Typography */
+              /* Other */
+              background-color: $white-10;
+
+              figcaption.caption {
+                /* Positioning */
+                /* Display and Box model */
+                border-color: $white-20;
+                /* Typography */
+                /* Other */
+              }
+
+              .more {
+
+                .link {
+                /* Positioning */
+                /* Display and Box model */
+                border-color: $white-20;
+                /* Typography */
+                color: $white-100;
+                /* Other */
+
+                  &:hover {
+                    /* Positioning */
+                    /* Display and Box model */
+                    border-color: $white-100;
+                    /* Typography */
+                    color: $white-100;
+                    /* Other */
+                  }
+                }
+              }
+            }
+          }
+
+          &.contacts {
+
+            figure.contact {
+              /* Positioning */
+              /* Display and Box model */
+              background-color: $white-10;
+              border-color: $white-20;
+              /* Typography */
+              /* Other */
+
+              .icon {
+                /* Positioning */
+                /* Display and Box model */
+                border-color: $white-20;
+                /* Typography */
+                color: $white-50;
+                /* Other */
+
+              }
+
+              .text {
+
+                .link {
+                  /* Positioning */
+                  /* Display and Box model */
+                  border-color: $white-20;
+                  /* Typography */
+                  color: $white-100;
+                  /* Other */
+
+                  p {
+                    /* Positioning */
+                    /* Display and Box model */
+                    /* Typography */
+                    color: $white-100;
+                    /* Other */
+                  }
+
+                  &:hover {
+                    /* Positioning */
+                    /* Display and Box model */
+                    border-color: $white-100;
+                    /* Typography */
+                    color: $white-100;
+                    /* Other */
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      section.footer {
+
+        .link {
+
+          .icon {
+
+            .image {
+              /* Positioning */
+              /* Display and Box model */
+              /* Typography */
+              /* Other */
+              filter: $light-gray;
+            }
+          }
+        }
+      }
+    }
+
+    &.light-gray {
+      /* Positioning */
+      /* Display and Box model */
+      background-color: $black-10;
+      /* Typography */
+      /* Other */
+
+      section.header {
+
+        .heading {
+          /* Positioning */
+          /* Display and Box model */
+          border-color: $black-50;
+          /* Typography */
+          /* Other */
+        }
+      }
+
+      section.content {
+
+        .body {
+
+          &.services {
+
+            figure.service {
+              /* Positioning */
+              /* Display and Box model */
+              border-color: $black-20;
+              /* Typography */
+              /* Other */
+
+              .icon {
+                /* Positioning */
+                /* Display and Box model */
+                border-color: $black-20;
+                /* Typography */
+                /* Other */
+              }
+            }
+          }
+
+          &.bios {
+
+            figure.bio {
+
+              .picture {
+                /* Positioning */
+                /* Display and Box model */
+                background-color: $black-10;
+                border-color: $black-20;
+                /* Typography */
+                /* Other */
+              }
+            }
+          }
+
+          &.projects {
+
+            figure.project {
+              /* Positioning */
+              /* Display and Box model */
+              border-color: $black-20;
+              /* Typography */
+              /* Other */
+              background-color: $black-10;
+
+              figcaption.caption {
+                /* Positioning */
+                /* Display and Box model */
+                border-color: $black-20;
+                /* Typography */
+                /* Other */
+              }
+
+              .more {
+
+                .link {
+                /* Positioning */
+                /* Display and Box model */
+                border-color: $black-20;
+                /* Typography */
+                color: $black-100;
+                /* Other */
+
+                  &:hover {
+                    /* Positioning */
+                    /* Display and Box model */
+                    border-color: $black-100;
+                    /* Typography */
+                    color: $black-100;
+                    /* Other */
+                  }
+                }
+              }
+            }
+          }
+
+          &.contacts {
+
+            figure.contact {
+              /* Positioning */
+              /* Display and Box model */
+              background-color: $black-10;
+              border-color: $black-20;
+              /* Typography */
+              /* Other */
+
+              .icon {
+                /* Positioning */
+                /* Display and Box model */
+                border-color: $black-20;
+                /* Typography */
+                color: $black-50;
+                /* Other */
+
+              }
+
+              .text {
+
+                .link {
+                  /* Positioning */
+                  /* Display and Box model */
+                  border-color: $black-20;
+                  /* Typography */
+                  color: $black-100;
+                  /* Other */
+
+                  p {
+                    /* Positioning */
+                    /* Display and Box model */
+                    /* Typography */
+                    color: $black-100;
+                    /* Other */
+                  }
+
+                  &:hover {
+                    /* Positioning */
+                    /* Display and Box model */
+                    border-color: $black-100;
+                    /* Typography */
+                    color: $black-100;
+                    /* Other */
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      section.footer {
+
+        a.link {
+
+          .icon {
+
+            img.image {
+              /* Positioning */
+              /* Display and Box model */
+              opacity: 0.3;
+              /* Typography */
+              /* Other */
+            }
+          }
+
+          &:hover {
+            .icon {
+              .image {
+                /* Positioning */
+                /* Display and Box model */
+                opacity: 1;
+                /* Typography */
+                /* Other */
+              }
+            }
+          }
+        }
+      }
+    }
 
     section.header {
       /* Positioning */
@@ -1518,6 +2089,18 @@ html {
         /* Typography */
         /* Other */
 
+        &:hover {
+          .icon {
+            .image {
+              /* Positioning */
+              /* Display and Box model */
+              opacity: 1;
+              /* Typography */
+              /* Other */
+            }
+          }
+        }
+
         .icon {
           /* Positioning */
           /* Display and Box model */
@@ -1537,588 +2120,6 @@ html {
             opacity: 0.3;
             /* Typography */
             /* Other */
-          }
-        }
-
-        &:hover {
-          .icon {
-            .image {
-              /* Positioning */
-              /* Display and Box model */
-              opacity: 1;
-              /* Typography */
-              /* Other */
-            }
-          }
-        }
-      }
-    }
-
-    /* ARTICLE TYPES */
-    &.black {
-      /* Positioning */
-      /* Display and Box model */
-      background-color: $black-100;
-      /* Typography */
-      /* Other */
-
-      h1, h2, h3, h4, h5, h6 {
-        /* Positioning */
-        /* Display and Box model */
-        /* Typography */
-        color: $white-100;
-        /* Other */
-      }
-
-      p {
-        /* Positioning */
-        /* Display and Box model */
-        /* Typography */
-        color: $white-70;
-        /* Other */
-      }
-
-      section.header {
-
-        .heading {
-          /* Positioning */
-          /* Display and Box model */
-          border-color: $white-40;
-          /* Typography */
-          /* Other */
-        }
-      }
-
-      section.content {
-
-        .body {
-
-          &.services {
-
-            figure.service {
-              /* Positioning */
-              /* Display and Box model */
-              background-color: $white-10;
-              border-color: $white-20;
-              /* Typography */
-              /* Other */
-
-              .icon {
-                /* Positioning */
-                /* Display and Box model */
-                border-color: $white-20;
-                /* Typography */
-                /* Other */
-
-                img.image {
-                  /* Positioning */
-                  /* Display and Box model */
-                  opacity: 0.5;
-                  filter: $inverted;
-                  /* Typography */
-                  /* Other */
-                }
-              }
-            }
-          }
-
-          &.bios {
-
-            figure.bio {
-
-              .picture {
-                /* Positioning */
-                /* Display and Box model */
-                background-color: $white-10;
-                border-color: $white-20;
-                /* Typography */
-                /* Other */
-              }
-            }
-          }
-
-          &.projects {
-
-            figure.project {
-              /* Positioning */
-              /* Display and Box model */
-              border-color: $white-20;
-              /* Typography */
-              /* Other */
-              background-color: $white-10;
-
-              figcaption.caption {
-                /* Positioning */
-                /* Display and Box model */
-                border-color: $white-20;
-                /* Typography */
-                /* Other */
-              }
-
-              .more {
-
-                .link {
-                /* Positioning */
-                /* Display and Box model */
-                border-color: $white-20;
-                /* Typography */
-                color: $white-100;
-                /* Other */
-
-                  &:hover {
-                    /* Positioning */
-                    /* Display and Box model */
-                    border-color: $white-100;
-                    /* Typography */
-                    color: $white-100;
-                    /* Other */
-                  }
-                }
-              }
-            }
-          }
-
-          &.contacts {
-
-            figure.contact {
-              /* Positioning */
-              /* Display and Box model */
-              background-color: $white-10;
-              border-color: $white-20;
-              /* Typography */
-              /* Other */
-
-              .icon {
-                /* Positioning */
-                /* Display and Box model */
-                border-color: $white-20;
-                /* Typography */
-                color: $white-50;
-                /* Other */
-
-              }
-
-              .text {
-
-                .link {
-                  /* Positioning */
-                  /* Display and Box model */
-                  border-color: $white-20;
-                  /* Typography */
-                  color: $white-100;
-                  /* Other */
-
-                  p {
-                    /* Positioning */
-                    /* Display and Box model */
-                    /* Typography */
-                    color: $white-100;
-                    /* Other */
-                  }
-
-                  &:hover {
-                    /* Positioning */
-                    /* Display and Box model */
-                    border-color: $white-100;
-                    /* Typography */
-                    color: $white-100;
-                    /* Other */
-                  }
-                }
-              }
-            }
-          }
-
-        }
-      }
-
-      section.footer {
-
-        .link {
-
-          .icon {
-
-            .image {
-              /* Positioning */
-              /* Display and Box model */
-              /* Typography */
-              /* Other */
-              filter: $light-gray;
-            }
-          }
-        }
-      }
-    }
-
-    &.dark-gray {
-      /* Positioning */
-      /* Display and Box model */
-      background-color: $black-80;
-      /* Typography */
-      /* Other */
-
-      h1, h2, h3, h4, h5, h6 {
-        /* Positioning */
-        /* Display and Box model */
-        /* Typography */
-        color: $white-100;
-        /* Other */
-      }
-
-      p {
-        /* Positioning */
-        /* Display and Box model */
-        /* Typography */
-        color: $white-70;
-        /* Other */
-      }
-
-      section.header {
-
-        .heading {
-          /* Positioning */
-          /* Display and Box model */
-          border-color: $white-50;
-          /* Typography */
-          /* Other */
-        }
-      }
-
-      section.content {
-
-        .body {
-
-          &.services {
-
-            figure.service {
-              /* Positioning */
-              /* Display and Box model */
-              background-color: $white-10;
-              border-color: $white-20;
-              /* Typography */
-              /* Other */
-
-              .icon {
-                /* Positioning */
-                /* Display and Box model */
-                border-color: $white-20;
-                /* Typography */
-                /* Other */
-
-                img.image {
-                  /* Positioning */
-                  /* Display and Box model */
-                  opacity: 0.5;
-                  filter: $inverted;
-                  /* Typography */
-                  /* Other */
-                }
-              }
-            }
-          }
-
-          &.bios {
-
-            figure.bio {
-
-              .picture {
-                /* Positioning */
-                /* Display and Box model */
-                background-color: $white-10;
-                border-color: $white-20;
-                /* Typography */
-                /* Other */
-              }
-            }
-          }
-
-          &.projects {
-
-            figure.project {
-              /* Positioning */
-              /* Display and Box model */
-              border-color: $white-20;
-              /* Typography */
-              /* Other */
-              background-color: $white-10;
-
-              figcaption.caption {
-                /* Positioning */
-                /* Display and Box model */
-                border-color: $white-20;
-                /* Typography */
-                /* Other */
-              }
-
-              .more {
-
-                .link {
-                /* Positioning */
-                /* Display and Box model */
-                border-color: $white-20;
-                /* Typography */
-                color: $white-100;
-                /* Other */
-
-                  &:hover {
-                    /* Positioning */
-                    /* Display and Box model */
-                    border-color: $white-100;
-                    /* Typography */
-                    color: $white-100;
-                    /* Other */
-                  }
-                }
-              }
-            }
-          }
-
-          &.contacts {
-
-            figure.contact {
-              /* Positioning */
-              /* Display and Box model */
-              background-color: $white-10;
-              border-color: $white-20;
-              /* Typography */
-              /* Other */
-
-              .icon {
-                /* Positioning */
-                /* Display and Box model */
-                border-color: $white-20;
-                /* Typography */
-                color: $white-50;
-                /* Other */
-
-              }
-
-              .text {
-
-                .link {
-                  /* Positioning */
-                  /* Display and Box model */
-                  border-color: $white-20;
-                  /* Typography */
-                  color: $white-100;
-                  /* Other */
-
-                  p {
-                    /* Positioning */
-                    /* Display and Box model */
-                    /* Typography */
-                    color: $white-100;
-                    /* Other */
-                  }
-
-                  &:hover {
-                    /* Positioning */
-                    /* Display and Box model */
-                    border-color: $white-100;
-                    /* Typography */
-                    color: $white-100;
-                    /* Other */
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-
-      section.footer {
-
-        .link {
-
-          .icon {
-
-            .image {
-              /* Positioning */
-              /* Display and Box model */
-              /* Typography */
-              /* Other */
-              filter: $light-gray;
-            }
-          }
-        }
-      }
-    }
-
-    &.light-gray {
-      /* Positioning */
-      /* Display and Box model */
-      background-color: $black-10;
-      /* Typography */
-      /* Other */
-
-      section.header {
-
-        .heading {
-          /* Positioning */
-          /* Display and Box model */
-          border-color: $black-50;
-          /* Typography */
-          /* Other */
-        }
-      }
-
-      section.content {
-
-        .body {
-
-          &.services {
-
-            figure.service {
-              /* Positioning */
-              /* Display and Box model */
-              border-color: $black-20;
-              /* Typography */
-              /* Other */
-
-              .icon {
-                /* Positioning */
-                /* Display and Box model */
-                border-color: $black-20;
-                /* Typography */
-                /* Other */
-              }
-            }
-          }
-
-          &.bios {
-
-            figure.bio {
-
-              .picture {
-                /* Positioning */
-                /* Display and Box model */
-                background-color: $black-10;
-                border-color: $black-20;
-                /* Typography */
-                /* Other */
-              }
-            }
-          }
-
-          &.projects {
-
-            figure.project {
-              /* Positioning */
-              /* Display and Box model */
-              border-color: $black-20;
-              /* Typography */
-              /* Other */
-              background-color: $black-10;
-
-              figcaption.caption {
-                /* Positioning */
-                /* Display and Box model */
-                border-color: $black-20;
-                /* Typography */
-                /* Other */
-              }
-
-              .more {
-
-                .link {
-                /* Positioning */
-                /* Display and Box model */
-                border-color: $black-20;
-                /* Typography */
-                color: $black-100;
-                /* Other */
-
-                  &:hover {
-                    /* Positioning */
-                    /* Display and Box model */
-                    border-color: $black-100;
-                    /* Typography */
-                    color: $black-100;
-                    /* Other */
-                  }
-                }
-              }
-            }
-          }
-
-          &.contacts {
-
-            figure.contact {
-              /* Positioning */
-              /* Display and Box model */
-              background-color: $black-10;
-              border-color: $black-20;
-              /* Typography */
-              /* Other */
-
-              .icon {
-                /* Positioning */
-                /* Display and Box model */
-                border-color: $black-20;
-                /* Typography */
-                color: $black-50;
-                /* Other */
-
-              }
-
-              .text {
-
-                .link {
-                  /* Positioning */
-                  /* Display and Box model */
-                  border-color: $black-20;
-                  /* Typography */
-                  color: $black-100;
-                  /* Other */
-
-                  p {
-                    /* Positioning */
-                    /* Display and Box model */
-                    /* Typography */
-                    color: $black-100;
-                    /* Other */
-                  }
-
-                  &:hover {
-                    /* Positioning */
-                    /* Display and Box model */
-                    border-color: $black-100;
-                    /* Typography */
-                    color: $black-100;
-                    /* Other */
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-
-      section.footer {
-
-        a.link {
-
-          .icon {
-
-            img.image {
-              /* Positioning */
-              /* Display and Box model */
-              opacity: 0.3;
-              /* Typography */
-              /* Other */
-            }
-          }
-
-          &:hover {
-            .icon {
-              .image {
-                /* Positioning */
-                /* Display and Box model */
-                opacity: 1;
-                /* Typography */
-                /* Other */
-              }
-            }
           }
         }
       }
