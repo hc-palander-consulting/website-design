@@ -2317,14 +2317,9 @@ html {
 
   #company-info {
 
-    table.list {
-      /* Positioning */
-      /* Display and Box model */
-      border-collapse: collapse;
-      /* Typography */
-      /* Other */
+    ul.list {
 
-      tr {
+      li {
         /* Positioning */
         /* Display and Box model */
         display: flex;
@@ -2333,7 +2328,7 @@ html {
 
         &:last-child {
 
-          td {
+          div {
             /* Positioning */
             /* Display and Box model */
             border-bottom: $border-width;
@@ -2343,7 +2338,7 @@ html {
           }
         }
 
-        td {
+        div {
           /* Positioning */
           /* Display and Box model */
           border-style: solid;
@@ -2366,7 +2361,7 @@ html {
             /* Display and Box model */
             border-color: $white-10;
             background-color: $white-10;
-            min-width: $column-width;
+            flex-basis: calc(#{$column-width} + (#{$gap-width} / 2 ));
             padding: calc(1rem * 1.75 / 2 - #{$border-width});
             /* Typography */
             font-weight: 700;
@@ -2377,7 +2372,7 @@ html {
             /* Positioning */
             /* Display and Box model */
             border-color: $white-20;
-            min-width: calc(#{$column-width} + #{$gap-width});
+            flex-basis: calc(#{$column-width} + (#{$gap-width} / 2 ));
             padding: calc(1rem * 1.75 / 2 - #{$border-width});
             /* Typography */
             /* Other */
