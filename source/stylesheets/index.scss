@@ -46,6 +46,11 @@ $white-70: rgba(255, 255, 255, 0.7);
 $white-80: rgba(255, 255, 255, 0.8);
 $white-100: rgba(255, 255, 255, 1);
 
+/* Grays */
+$black: #0A0A0A;
+$dark-gray: #333333;
+$light-gray: #E4E4E4;
+
 /* Accent Colors */
 $blue-accent: rgba(74, 183, 244, 1);
 
@@ -75,7 +80,7 @@ $preferred-font-size: calc((#{strip-unit($min-font-size)} / #{strip-unit(100vw)}
 $max-font-size: 0.78125vw; /* (16px / 2048 * 100) */
 
 /* Filters */
-$light-gray: invert(99%) sepia(5%) saturate(0%) hue-rotate(95deg) brightness(107%) contrast(100%);
+$light-gray-filter: invert(99%) sepia(5%) saturate(0%) hue-rotate(95deg) brightness(107%) contrast(100%);
 $grayscale: grayscale(100%);
 $inverted: brightness(0) invert(1);
 
@@ -518,7 +523,6 @@ html {
   #main {
     /* Positioning */
     /* Display and Box model */
-    background-color: $white-100;
     display: grid;
     grid-area: main;
     grid-template-columns: 1fr;
@@ -531,7 +535,6 @@ html {
     /* Positioning */
     /* Display and Box model */
     align-items: center;
-    background-color: $black-80;
     display: grid;
     grid-area: footer;
     grid-template-areas:
@@ -914,6 +917,7 @@ html {
   article.article {
     /* Positioning */
     /* Display and Box model */
+    background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -926,7 +930,7 @@ html {
     &.black {
       /* Positioning */
       /* Display and Box model */
-      background-color: $black-100;
+      background-color: $black;
       /* Typography */
       /* Other */
 
@@ -1111,7 +1115,7 @@ html {
               /* Display and Box model */
               /* Typography */
               /* Other */
-              filter: $light-gray;
+              filter: $light-gray-filter;
             }
           }
         }
@@ -1121,7 +1125,7 @@ html {
     &.dark-gray {
       /* Positioning */
       /* Display and Box model */
-      background-color: $black-80;
+      background-color: #333333;
       /* Typography */
       /* Other */
 
@@ -1305,7 +1309,7 @@ html {
               /* Display and Box model */
               /* Typography */
               /* Other */
-              filter: $light-gray;
+              filter: $light-gray-filter;
             }
           }
         }
@@ -1315,7 +1319,7 @@ html {
     &.light-gray {
       /* Positioning */
       /* Display and Box model */
-      background-color: $black-10;
+      background-color: $light-gray;
       /* Typography */
       /* Other */
 
@@ -2128,20 +2132,16 @@ html {
 
   #hero {
     /* Positioning */
+    z-index: -1;
     /* Display and Box model */
-    background: url("../../images/hero.jpg");
-    background-attachment: fixed;
-    background-position: right 85% bottom 75%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    justify-content: center;
+    background-color: $black;
     min-height: calc(100vh * 0.65);
     padding: 0;
+    position: relative;
     /* Typography */
     /* Other */
-    filter: $grayscale;
 
-    section.content {
+    section.header {
       /* Positioning */
       /* Display and Box model */
       align-items: center;
@@ -2157,6 +2157,8 @@ html {
       .heading {
         /* Positioning */
         /* Display and Box model */
+        border: none;
+        height: auto;
         margin: calc(((#{$header-height} * 0.5) + #{$header-height} - #{$gap-width})) 0;
         max-width: calc(#{$column-width} * 8 + calc(#{$gap-width} * 7));
         padding: $gap-width $fluid-horizontal-padding;
@@ -2171,6 +2173,49 @@ html {
           color: $white-100;
           text-transform: uppercase;
           /* Other */
+        }
+      }
+    }
+
+    section.content {
+      /* Positioning */
+      position: absolute;
+      /* Display and Box model */
+      height: 100%;
+      width: 100%;
+      /* Typography */
+      /* Other */
+
+      .body {
+        /* Positioning */
+        /* Display and Box model */
+        height: 100%;
+        width: 100%;
+        /* Typography */
+        /* Other */
+
+        .image {
+          /* Positioning */
+          /* Display and Box model */
+          box-sizing: content-box;
+          height: 100%;
+          overflow: hidden;
+          width: 100%;
+          /* Typography */
+          /* Other */
+
+          img {
+            /* Positioning */
+            position: fixed;
+            z-index: -1;
+            /* Display and Box model */
+            min-height: calc(100vh * 0.65);
+            object-fit: cover;
+            width: 100%;
+            /* Typography */
+            /* Other */
+            filter: $grayscale;
+          }
         }
       }
     }
@@ -2224,6 +2269,7 @@ html {
     /* Other */
 
     &.top {
+      background-color: $dark-gray;
 
       .header {
 
@@ -2292,7 +2338,7 @@ html {
     &.bottom {
       /* Positioning */
       /* Display and Box model */
-      background-color: $black-80;
+      background-color: $black;
       /* Typography */
       /* Other */
 
