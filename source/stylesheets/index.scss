@@ -244,7 +244,7 @@ html {
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 2;
+  z-index: 3;
   /* Display and Box model */
   background-color: $black-100;
   display: grid;
@@ -488,7 +488,7 @@ html {
     position: fixed;
     left: 0;
     top: 0;
-    z-index: 1;
+    z-index: 2;
     /* Display and Box model */
     background: none;
     display: grid;
