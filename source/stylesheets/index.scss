@@ -1239,28 +1239,46 @@ html {
                 /* Other */
               }
 
-              .more {
+            .button {
+              /* Positioning */
+              /* Display and Box model */
+              grid-area: button;
+              padding: 0 $gap-width $gap-width $gap-width;
+              /* Typography */
+              /* Other */
 
-                .link {
-                /* Positioning */
-                /* Display and Box model */
-                border-color: $white-20;
-                /* Typography */
-                color: $white-100;
-                /* Other */
+              .link {
+              /* Positioning */
+              /* Display and Box model */
+              border-color: $black-20;
+              border-style: solid;
+              border-width: $border-width;
+              display: block;
+              padding: calc(#{$gap-width} / 2) calc(#{$gap-width} / 2) 0.5625rem;
+              width: 100%;
+              /* Typography */
+              color: $black-100;
+              font-family: $font-family-monospace;
+              font-size: 0.8125rem;
+              font-weight: 700;
+              text-align: center;
+              text-transform: uppercase;
+              /* Other */
 
-                  &:hover {
-                    /* Positioning */
-                    /* Display and Box model */
-                    border-color: $white-100;
-                    /* Typography */
-                    color: $white-100;
-                    /* Other */
-                  }
+                &:hover {
+                  /* Positioning */
+                  /* Display and Box model */
+                  border-color: $black-100;
+                  border-style: solid;
+                  /* Typography */
+                  color: $black-100;
+                  /* Other */
+                  cursor: pointer;
                 }
               }
             }
           }
+        }
 
           &.contacts {
 
@@ -1284,36 +1302,46 @@ html {
 
               .text {
 
-                .link {
+            .button {
+              /* Positioning */
+              /* Display and Box model */
+              grid-area: button;
+              /* Typography */
+              /* Other */
+
+              .link {
+                /* Positioning */
+                /* Display and Box model */
+                border: $border-width solid $black-20;
+                display: block;
+                padding: calc(#{$gap-width} / 2) calc(#{$gap-width} / 2) 0.5625rem;
+                width: 100%;
+                /* Typography */
+                color: $black-100;
+                text-decoration: none;
+                font-family: $font-family-monospace;
+                font-size: 0.8125rem;
+                font-weight: 700;
+                text-align: center;
+                text-transform: uppercase;
+                /* Other */
+
+                &:hover {
                   /* Positioning */
                   /* Display and Box model */
-                  border-color: $white-20;
+                  border-color: $black-100;
+                  border-style: solid;
                   /* Typography */
-                  color: $white-100;
+                  color: $black-100;
                   /* Other */
-
-                  p {
-                    /* Positioning */
-                    /* Display and Box model */
-                    /* Typography */
-                    color: $white-100;
-                    /* Other */
-                  }
-
-                  &:hover {
-                    /* Positioning */
-                    /* Display and Box model */
-                    border-color: $white-100;
-                    /* Typography */
-                    color: $white-100;
-                    /* Other */
-                  }
+                  cursor: pointer;
                 }
               }
             }
           }
         }
       }
+    }
 
       section.footer {
 
