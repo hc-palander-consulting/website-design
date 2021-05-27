@@ -2297,7 +2297,6 @@ html {
     /* Positioning */
     z-index: -1;
     /* Display and Box model */
-    background-color: $black;
     min-height: calc(100vh * 0.65);
     padding: 0;
     position: relative;
@@ -2333,7 +2332,6 @@ html {
           /* Display and Box model */
           margin: 0;
           /* Typography */
-          color: $white-100;
           text-transform: uppercase;
           /* Other */
         }
