@@ -943,6 +943,700 @@ html {
     /* Typography */
     /* Other */
 
+    /*=====================*/
+    /* WP FIXES            */
+    /*=====================*/
+    /* WP FIX1: Keeps the aspect ratio to the image when resizing */
+    /* https://core.trac.wordpress.org/ticket/50909#comment:14 */
+    .wp-block-image img {
+      max-width: 100%;
+      height: auto;
+    }
+    .wp-block-media-text__media img,
+    .wp-block-media-text__media video {
+      max-width: unset;
+      width: 100%;
+      vertical-align: middle;
+      height: auto;
+    }
+
+    /* WP FIX2: Colors */
+    .wp-block-table.is-style-stripes tbody tr:nth-child(2n+1) {
+      background-color: $black-10;
+    }
+    .wp-block-table.is-style-stripes {
+      border-bottom: 1px solid $black-10;
+    }
+    .wp-block-separator {
+      color: $black-10;
+    }
+    .wp-block-calendar table th {
+      background-color: $black-10;
+    }
+
+    .wp-block-file .wp-block-file__button,
+    .wp-block-button__link {
+      color: $white-70;
+    }
+
+    /* WP FIX3: Bottom margins */
+    ul,
+    .wp-block-pullquote,
+    .wp-block-verse,
+    .wp-block-code,
+    .wp-block-table,
+    .wp-block-media-text,
+    .wp-block-preformatted,
+    .wp-block-audio,
+    .wp-block-file,
+    .wp-block-embed,
+    .wp-block-cover,
+    .wp-block-buttons,
+    .wp-block-columns,
+    .more-581,
+    .wp-block-separator,
+    .wp-block-latest-comments,
+    .wp-block-search {
+      margin-bottom: 1rem;
+    }
+
+    section.header {
+      /* Positioning */
+      /* Display and Box model */
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      height: 12.5rem;
+      justify-content: center;
+      /* Typography */
+      text-align: center;
+      /* Other */
+
+      .heading {
+        /* Positioning */
+        /* Display and Box model */
+        border-color: $black-40;
+        border-style: solid;
+        border-width: $border-width;
+        height:  $header-height;
+        min-width: 100%;
+        padding: $gap-width;
+        width: auto;
+        /* Typography */
+        /* Other */
+
+        @media screen and (min-width: $medium-devices) {
+          /* Positioning */
+          /* Display and Box model */
+          min-width: calc(#{$column-width} * 4 + (#{$gap-width} * 3));
+          /* Typography */
+          /* Other */
+        }
+
+        h2 {
+          /* Positioning */
+          /* Display and Box model */
+          margin: 0;
+          /* Typography */
+          line-height: calc(#{$header-height} - (#{$gap-width} * 2));
+          text-transform: uppercase;
+          /* Other */
+
+        }
+      }
+    }
+
+    section.content {
+      /* Positioning */
+      /* Display and Box model */
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      justify-content: center;
+      /* Typography */
+      /* Other */
+
+      .body {
+
+        /* CONTENT TYPES */
+        &.services {
+          /* Positioning */
+          /* Display and Box model */
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: $gap-width;
+          width: 100%;
+          /* Typography */
+          /* Other */
+
+          @media screen and (min-width: $medium-devices) {
+            /* Positioning */
+            /* Display and Box model */
+            grid-template-columns:
+              repeat(
+                auto-fill,
+                minmax(
+                  calc(#{$column-width} * 3 + calc(#{$gap-width} * 2)),
+                  1fr
+                )
+              );
+            /* Typography */
+            /* Other */
+          }
+
+          figure.service {
+            /* Positioning */
+            /* Display and Box model */
+            align-items: center;
+            background-color: $white-50;
+            border-color: $black-20;
+            border-style: solid;
+            border-width: $border-width;
+            box-sizing: content-box;
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            margin: 0;
+            padding: $gap-width;
+            /* Typography */
+            /* Other */
+
+            figcaption.caption {
+
+              .title {
+                /* Positioning */
+                /* Display and Box model */
+                width: auto;
+                /* Typography */
+                text-align: center;
+                /* Other */
+
+                h6 {
+                  /* Positioning */
+                  /* Display and Box model */
+                  margin: 0;
+                  /* Typography */
+                  text-transform: none;
+                  /* Other */
+                }
+              }
+
+              .description {
+                /* Positioning */
+                /* Display and Box model */
+                margin: 0;
+                /* Typography */
+                color: $black-100;
+                text-align: center;
+                /* Other */
+              }
+            }
+
+            .icon {
+              /* Positioning */
+              /* Display and Box model */
+              align-items: center;
+              border-bottom: $border-width solid $black-20;
+              box-sizing: border-box;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              padding-bottom: calc(#{$gap-width} / 2);
+              margin-bottom: $gap-width;
+              /* Typography */
+              /* Other */
+
+              img.image {
+                /* Positioning */
+                /* Display and Box model */
+                opacity: 0.5;
+                width: 2rem;
+                /* Typography */
+                /* Other */
+              }
+            }
+          }
+        }
+
+        &.bios {
+          /* Positioning */
+          /* Display and Box model */
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: $gap-width;
+          width: 100%;
+          /* Typography */
+          /* Other */
+
+          @media screen and (min-width: $medium-devices) {
+            /* Positioning */
+            /* Display and Box model */
+            grid-template-columns:
+              repeat(
+                auto-fit,
+                minmax(
+                  calc(#{$column-width} * 4 + calc(#{$gap-width} * 3)),
+                  1fr
+                )
+              );
+            /* Typography */
+            /* Other */
+          }
+
+          figure.bio {
+            /* Positioning */
+            /* Display and Box model */
+            display: grid;
+            gap: $gap-width;
+            grid-template-areas:
+              "picture"
+              "caption"
+              "text";
+            grid-template-columns:
+              [first] 1fr;
+            grid-template-rows: auto;
+            /* Typography */
+            /* Other */
+
+            @media screen and (min-width: $medium-devices) {
+              /* Positioning */
+              /* Display and Box model */
+              grid-template-areas:
+                "picture caption"
+                "picture text";
+              grid-template-columns:
+                [picture] auto
+                [caption] 1fr;
+              grid-template-rows:
+                [caption] auto
+                [text] 1fr;
+              /* Typography */
+              /* Other */
+            }
+
+            .picture {
+              /* Positioning */
+              /* Display and Box model */
+              align-self: start;
+              background-color: $white-10;
+              border-color: $white-20;
+              border-style: solid;
+              border-width: $border-width;
+              box-sizing: content-box;
+              grid-area: picture;
+              height: auto;
+              line-height: 0;
+              width: 100%;
+              /* Typography */
+              /* Other */
+
+              @media screen and (min-width: $medium-devices) {
+                /* Positioning */
+                /* Display and Box model */
+                max-width: calc(#{$column-width} * 2 + #{$gap-width});
+                /* Typography */
+                /* Other */
+              }
+
+              img.image {
+                /* Positioning */
+                /* Display and Box model */
+                object-fit: contain;
+                height: auto;
+                width: 100%;
+                /* Typography */
+                /* Other */
+                filter: $grayscale;
+              }
+            }
+
+            figcaption.caption {
+              /* Positioning */
+              /* Display and Box model */
+              grid-area: caption;
+              height: auto;
+              min-height: calc(2.369rem * 1.3) + calc(1.777rem * 1.3);
+              /* Typography */
+              /* Other */
+
+              .title {
+
+                h3,h4 {
+                  /* Positioning */
+                  /* Display and Box model */
+                  margin: 0;
+                  /* Typography */
+                  /* Other */
+                }
+              }
+            }
+
+            .text {
+              /* Positioning */
+              /* Display and Box model */
+              grid-area: text;
+              height: auto;
+              /* Typography */
+              /* Other */
+
+              @media screen and (min-width: $medium-devices) {
+                /* Positioning */
+                /* Display and Box model */
+                max-width: calc(#{$column-width} * 5 + calc(#{$gap-width} * 4));
+                // max-width: 50%;
+                /* Typography */
+                /* Other */
+              }
+            }
+          }
+        }
+
+        &.projects {
+          /* Positioning */
+          /* Display and Box model */
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: $gap-width;
+          width: auto;
+          /* Typography */
+          /* Other */
+
+          @media screen and (min-width: $medium-devices) {
+            /* Positioning */
+            /* Display and Box model */
+            grid-template-columns:
+              repeat(
+                auto-fill,
+                minmax(
+                  calc(#{$column-width} * 3 + calc(#{$gap-width} * 2)),
+                  1fr
+                )
+              );
+            /* Typography */
+            /* Other */
+          }
+
+          figure.project {
+            /* Positioning */
+            /* Display and Box model */
+            align-items: center;
+            border-color: $black-20;
+            border-style: solid;
+            border-width: $border-width;
+            box-sizing: content-box;
+            display: grid;
+            grid-template-areas:
+              "picture"
+              "caption"
+              "text"
+              "button";
+            grid-template-columns:
+              [first] 1fr;
+            grid-template-rows:
+              [picture] 18.75rem
+              [caption] auto
+              [text] 1fr
+              [button] auto;
+            margin: 0;
+            /* Typography */
+            /* Other */
+            background-color: $white-50;
+
+            .picture {
+              /* Positioning */
+              /* Display and Box model */
+              grid-area: picture;
+              line-height: 0;
+              /* Typography */
+              /* Other */
+
+              img.image {
+                /* Positioning */
+                /* Display and Box model */
+                height: 18.75rem;
+                object-fit: cover;
+                width: 100%;
+                /* Typography */
+                /* Other */
+                filter: $grayscale;
+              }
+            }
+
+            figcaption.caption {
+              /* Positioning */
+              /* Display and Box model */
+              border-color: $black-20;
+              border-style: solid;
+              border-width: $border-width 0;
+              grid-area: caption;
+              min-height: calc(#{$gap-width} * 2 + calc(2.369rem * 1.3) + calc(1.777rem * 1.3) + #{$border-width}); /* padding (top + bottom) + h4 line height + h3 line height + border (bottom) */
+              padding: $gap-width;
+              /* Typography */
+              /* Other */
+
+              .title {
+
+                h3,h4 {
+                  /* Positioning */
+                  /* Display and Box model */
+                  margin: 0;
+                  /* Typography */
+                  /* Other */
+                }
+              }
+            }
+
+            .text {
+              /* Positioning */
+              /* Display and Box model */
+              grid-area: text;
+              height: 100%;
+              padding: $gap-width;
+              /* Typography */
+              /* Other */
+
+              p {
+
+                &:last-child {
+                  /* Positioning */
+                  /* Display and Box model */
+                  margin-bottom: 0;
+                  /* Typography */
+                  /* Other */
+                }
+              }
+            }
+
+            .button {
+              /* Positioning */
+              /* Display and Box model */
+              grid-area: button;
+              padding: 0 $gap-width $gap-width $gap-width;
+              /* Typography */
+              /* Other */
+
+              .link {
+              /* Positioning */
+              /* Display and Box model */
+              border-color: $black-20;
+              border-style: solid;
+              border-width: $border-width;
+              display: block;
+              padding: calc(#{$gap-width} / 2) calc(#{$gap-width} / 2) 0.5625rem;
+              width: 100%;
+              /* Typography */
+              color: $black-100;
+              font-family: $font-family-monospace;
+              font-size: 0.8125rem;
+              font-weight: 700;
+              text-align: center;
+              text-transform: uppercase;
+              /* Other */
+
+                &:hover {
+                  /* Positioning */
+                  /* Display and Box model */
+                  border-color: $black-100;
+                  border-style: solid;
+                  /* Typography */
+                  color: $black-100;
+                  /* Other */
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+        }
+
+        &.contacts {
+          /* Positioning */
+          /* Display and Box model */
+          justify-content: center;
+          display: grid;
+          gap: $gap-width;
+          grid-template-columns: 1fr;
+          width: 100%;
+          /* Typography */
+          font-style: normal;
+          /* Other */
+
+          @media screen and (min-width: $medium-devices) {
+            /* Positioning */
+            /* Display and Box model */
+            grid-template-columns:
+              repeat(
+                auto-fit,
+                minmax(
+                  auto,
+                  calc(#{$column-width} * 3 + calc(#{$gap-width} * 2))
+                )
+              );
+            /* Typography */
+            /* Other */
+          }
+
+          figure.contact {
+            /* Positioning */
+            /* Display and Box model */
+            background-color: $black-10;
+            border-color: $black-20;
+            border-style: solid;
+            border-width: $border-width;
+            display: grid;
+            grid-template-areas:
+              "icon"
+              "caption"
+              "button";
+            grid-template-columns:
+              [first] auto;
+            grid-template-rows:
+              [icon] auto
+              [caption] auto
+              [button] 1fr;
+            padding: $gap-width;
+            /* Typography */
+            /* Other */
+
+            .icon {
+              /* Positioning */
+              /* Display and Box model */
+              align-items: center;
+              border-bottom: $border-width solid $black-20;
+              box-sizing: border-box;
+              display: flex;
+              flex-direction: column;
+              grid-area: icon;
+              justify-content: center;
+              justify-self: center;
+              margin-bottom: $gap-width;
+              padding-bottom: $gap-width;
+              width: 2.625rem;
+              /* Typography */
+              color: $black-50;
+              font-size: 2.625rem;
+              line-height: 0;
+              /* Other */
+
+              i {
+                /* Positioning */
+                /* Display and Box model */
+                width: auto;
+                /* Typography */
+                /* Other */
+              }
+            }
+
+            figcaption.caption {
+              /* Positioning */
+              /* Display and Box model */
+              grid-area: caption;
+              /* Typography */
+              /* Other */
+
+              .title {
+
+                h5 {
+                  /* Positioning */
+                  /* Display and Box model */
+                  /* Typography */
+                  margin-top: 0;
+                  text-align: center;
+                  /* Other */
+                }
+              }
+            }
+
+            .button {
+              /* Positioning */
+              /* Display and Box model */
+              grid-area: button;
+              /* Typography */
+              /* Other */
+
+              .link {
+                /* Positioning */
+                /* Display and Box model */
+                border: $border-width solid $black-20;
+                display: block;
+                padding: calc(#{$gap-width} / 2) calc(#{$gap-width} / 2) 0.5625rem;
+                width: 100%;
+                /* Typography */
+                color: $black-100;
+                text-decoration: none;
+                font-family: $font-family-monospace;
+                font-size: 0.8125rem;
+                font-weight: 700;
+                text-align: center;
+                text-transform: uppercase;
+                /* Other */
+
+                &:hover {
+                  /* Positioning */
+                  /* Display and Box model */
+                  border-color: $black-100;
+                  border-style: solid;
+                  /* Typography */
+                  color: $black-100;
+                  /* Other */
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    section.footer {
+
+      a.link {
+        /* Positioning */
+        /* Display and Box model */
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        height: $header-height;
+        justify-content: center;
+        /* Typography */
+        /* Other */
+
+        &:hover {
+          .icon {
+            .image {
+              /* Positioning */
+              /* Display and Box model */
+              opacity: 1;
+              /* Typography */
+              /* Other */
+            }
+          }
+        }
+
+        .icon {
+          /* Positioning */
+          /* Display and Box model */
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          width: 3.875rem;
+          height: 3.875rem;
+          /* Typography */
+          /* Other */
+
+          img.image {
+            /* Positioning */
+            /* Display and Box model */
+            width: 2rem;
+            opacity: 0.3;
+            /* Typography */
+            /* Other */
+          }
+        }
+      }
+    }
+
     /* ARTICLE TYPES */
     &.black {
       /* Positioning */
@@ -950,6 +1644,42 @@ html {
       background-color: $black;
       /* Typography */
       /* Other */
+
+      a {
+        /* Positioning */
+        /* Display and Box model */
+        /* Typography */
+        color: $white-70;
+        /* Other */
+
+        &:hover {
+          /* Positioning */
+          /* Display and Box model */
+          /* Typography */
+          color: $white-100;
+          /* Other */
+          cursor: pointer;
+        }
+      }
+
+      div, span, applet, object, iframe,
+      p, blockquote, pre, abbr, acronym,
+      address, big, cite, code, del, dfn,
+      em, img, ins, kbd, q, s, samp,
+      small, strike, strong, sub, sup, tt, var,
+      b, u, i, center, dl, dt, dd, ol, ul, li,
+      fieldset, form, label, legend,
+      table, caption, tbody, tfoot, thead, tr, th, td,
+      article, aside, canvas, details, embed,
+      figure, figcaption, footer, header, hgroup,
+      menu, nav, output, ruby, section, summary,
+      time, mark, audio, video {
+        /* Positioning */
+        /* Display and Box model */
+        /* Typography */
+        color: $white-70;
+        /* Other */
+      }
 
       h1, h2, h3, h4, h5, h6 {
         /* Positioning */
@@ -959,12 +1689,18 @@ html {
         /* Other */
       }
 
-      p {
-        /* Positioning */
-        /* Display and Box model */
-        /* Typography */
-        color: $white-70;
-        /* Other */
+      /* WP FIX2: Colors */
+      .wp-block-table.is-style-stripes tbody tr:nth-child(2n+1) {
+        background-color: $white-10;
+      }
+      .wp-block-table.is-style-stripes {
+        border-bottom: 1px solid $white-10;
+      }
+      .wp-block-separator {
+        color: $white-10;
+      }
+      .wp-block-calendar table th {
+        background-color: $white-10;
       }
 
       section.header {
@@ -1146,6 +1882,42 @@ html {
       /* Typography */
       /* Other */
 
+      a {
+        /* Positioning */
+        /* Display and Box model */
+        /* Typography */
+        color: $white-70;
+        /* Other */
+
+        &:hover {
+          /* Positioning */
+          /* Display and Box model */
+          /* Typography */
+          color: $white-100;
+          /* Other */
+          cursor: pointer;
+        }
+      }
+
+      div, span, applet, object, iframe,
+      p, blockquote, pre, abbr, acronym,
+      address, big, cite, code, del, dfn,
+      em, img, ins, kbd, q, s, samp,
+      small, strike, strong, sub, sup, tt, var,
+      b, u, i, center, dl, dt, dd, ol, ul, li,
+      fieldset, form, label, legend,
+      table, caption, tbody, tfoot, thead, tr, th, td,
+      article, aside, canvas, details, embed,
+      figure, figcaption, footer, header, hgroup,
+      menu, nav, output, ruby, section, summary,
+      time, mark, audio, video {
+        /* Positioning */
+        /* Display and Box model */
+        /* Typography */
+        color: $white-70;
+        /* Other */
+      }
+
       h1, h2, h3, h4, h5, h6 {
         /* Positioning */
         /* Display and Box model */
@@ -1154,12 +1926,18 @@ html {
         /* Other */
       }
 
-      p {
-        /* Positioning */
-        /* Display and Box model */
-        /* Typography */
-        color: $white-70;
-        /* Other */
+      /* WP FIX2: Colors */
+      .wp-block-table.is-style-stripes tbody tr:nth-child(2n+1) {
+        background-color: $white-10;
+      }
+      .wp-block-table.is-style-stripes {
+        border-bottom: 1px solid $white-10;
+      }
+      .wp-block-separator {
+        color: $white-10;
+      }
+      .wp-block-calendar table th {
+        background-color: $white-10;
       }
 
       section.header {
@@ -1239,46 +2017,28 @@ html {
                 /* Other */
               }
 
-            .button {
-              /* Positioning */
-              /* Display and Box model */
-              grid-area: button;
-              padding: 0 $gap-width $gap-width $gap-width;
-              /* Typography */
-              /* Other */
+              .more {
 
-              .link {
-              /* Positioning */
-              /* Display and Box model */
-              border-color: $black-20;
-              border-style: solid;
-              border-width: $border-width;
-              display: block;
-              padding: calc(#{$gap-width} / 2) calc(#{$gap-width} / 2) 0.5625rem;
-              width: 100%;
-              /* Typography */
-              color: $black-100;
-              font-family: $font-family-monospace;
-              font-size: 0.8125rem;
-              font-weight: 700;
-              text-align: center;
-              text-transform: uppercase;
-              /* Other */
+                .link {
+                /* Positioning */
+                /* Display and Box model */
+                border-color: $white-20;
+                /* Typography */
+                color: $white-100;
+                /* Other */
 
-                &:hover {
-                  /* Positioning */
-                  /* Display and Box model */
-                  border-color: $black-100;
-                  border-style: solid;
-                  /* Typography */
-                  color: $black-100;
-                  /* Other */
-                  cursor: pointer;
+                  &:hover {
+                    /* Positioning */
+                    /* Display and Box model */
+                    border-color: $white-100;
+                    /* Typography */
+                    color: $white-100;
+                    /* Other */
+                  }
                 }
               }
             }
           }
-        }
 
           &.contacts {
 
@@ -1302,46 +2062,36 @@ html {
 
               .text {
 
-            .button {
-              /* Positioning */
-              /* Display and Box model */
-              grid-area: button;
-              /* Typography */
-              /* Other */
-
-              .link {
-                /* Positioning */
-                /* Display and Box model */
-                border: $border-width solid $black-20;
-                display: block;
-                padding: calc(#{$gap-width} / 2) calc(#{$gap-width} / 2) 0.5625rem;
-                width: 100%;
-                /* Typography */
-                color: $black-100;
-                text-decoration: none;
-                font-family: $font-family-monospace;
-                font-size: 0.8125rem;
-                font-weight: 700;
-                text-align: center;
-                text-transform: uppercase;
-                /* Other */
-
-                &:hover {
+                .link {
                   /* Positioning */
                   /* Display and Box model */
-                  border-color: $black-100;
-                  border-style: solid;
+                  border-color: $white-20;
                   /* Typography */
-                  color: $black-100;
+                  color: $white-100;
                   /* Other */
-                  cursor: pointer;
+
+                  p {
+                    /* Positioning */
+                    /* Display and Box model */
+                    /* Typography */
+                    color: $white-100;
+                    /* Other */
+                  }
+
+                  &:hover {
+                    /* Positioning */
+                    /* Display and Box model */
+                    border-color: $white-100;
+                    /* Typography */
+                    color: $white-100;
+                    /* Other */
+                  }
                 }
               }
             }
           }
         }
       }
-    }
 
       section.footer {
 
@@ -1541,638 +2291,6 @@ html {
       }
     }
 
-    section.header {
-      /* Positioning */
-      /* Display and Box model */
-      align-items: center;
-      display: flex;
-      flex-direction: column;
-      height: 12.5rem;
-      justify-content: center;
-      /* Typography */
-      text-align: center;
-      /* Other */
-
-      .heading {
-        /* Positioning */
-        /* Display and Box model */
-        border-color: $black-40;
-        border-style: solid;
-        border-width: $border-width;
-        height:  $header-height;
-        min-width: 100%;
-        /* Typography */
-        /* Other */
-
-        @media screen and (min-width: $medium-devices) {
-          /* Positioning */
-          /* Display and Box model */
-          min-width: calc(#{$column-width} * 4 + (#{$gap-width} * 3));
-          /* Typography */
-          /* Other */
-        }
-
-        h2 {
-          /* Positioning */
-          /* Display and Box model */
-          margin: 0;
-          /* Typography */
-          text-transform: uppercase;
-          /* Other */
-          line-height: $header-height;
-        }
-      }
-    }
-
-    section.content {
-      /* Positioning */
-      /* Display and Box model */
-      align-items: center;
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-      justify-content: center;
-      /* Typography */
-      /* Other */
-
-      .body {
-
-        /* CONTENT TYPES */
-        &.services {
-          /* Positioning */
-          /* Display and Box model */
-          display: grid;
-          grid-template-columns: 1fr;
-          gap: $gap-width;
-          width: 100%;
-          /* Typography */
-          /* Other */
-
-          @media screen and (min-width: $medium-devices) {
-            /* Positioning */
-            /* Display and Box model */
-            grid-template-columns:
-              repeat(
-                auto-fill,
-                minmax(
-                  calc(#{$column-width} * 3 + calc(#{$gap-width} * 2)),
-                  1fr
-                )
-              );
-            /* Typography */
-            /* Other */
-          }
-
-          figure.service {
-            /* Positioning */
-            /* Display and Box model */
-            align-items: center;
-            background-color: $white-50;
-            border-color: $black-20;
-            border-style: solid;
-            border-width: $border-width;
-            box-sizing: content-box;
-            display: flex;
-            flex-direction: column;
-            height: auto;
-            margin: 0;
-            padding: $gap-width;
-            /* Typography */
-            /* Other */
-
-            figcaption.caption {
-
-              .title {
-                /* Positioning */
-                /* Display and Box model */
-                width: auto;
-                /* Typography */
-                text-align: center;
-                /* Other */
-
-                h6 {
-                  /* Positioning */
-                  /* Display and Box model */
-                  margin: 0;
-                  /* Typography */
-                  text-transform: none;
-                  /* Other */
-                }
-              }
-
-              .description {
-                /* Positioning */
-                /* Display and Box model */
-                margin: 0;
-                /* Typography */
-                color: $black-100;
-                text-align: center;
-                /* Other */
-              }
-            }
-
-            .icon {
-              /* Positioning */
-              /* Display and Box model */
-              align-items: center;
-              border-bottom: $border-width solid $black-20;
-              box-sizing: border-box;
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              padding-bottom: calc(#{$gap-width} / 2);
-              margin-bottom: $gap-width;
-              /* Typography */
-              /* Other */
-
-              img.image {
-                /* Positioning */
-                /* Display and Box model */
-                opacity: 0.5;
-                width: 2rem;
-                /* Typography */
-                /* Other */
-              }
-            }
-          }
-        }
-
-        &.bios {
-          /* Positioning */
-          /* Display and Box model */
-          display: grid;
-          grid-template-columns: 1fr;
-          gap: $gap-width;
-          width: auto;
-          /* Typography */
-          /* Other */
-
-          @media screen and (min-width: $medium-devices) {
-            /* Positioning */
-            /* Display and Box model */
-            grid-template-columns:
-              repeat(
-                auto-fit,
-                minmax(
-                  calc(#{$column-width} * 4 + calc(#{$gap-width} * 3)),
-                  1fr
-                )
-              );
-            /* Typography */
-            /* Other */
-          }
-
-          figure.bio {
-            /* Positioning */
-            /* Display and Box model */
-            display: grid;
-            gap: $gap-width;
-            grid-template-areas:
-              "picture"
-              "caption"
-              "text";
-            grid-template-columns:
-              [first] 1fr;
-            grid-template-rows: auto;
-            /* Typography */
-            /* Other */
-
-            @media screen and (min-width: $medium-devices) {
-              /* Positioning */
-              /* Display and Box model */
-              grid-template-areas:
-                "picture caption"
-                "picture text";
-              grid-template-columns:
-                [picture] auto
-                [caption] 1fr;
-              grid-template-rows:
-                [caption] auto
-                [text] 1fr;
-              /* Typography */
-              /* Other */
-            }
-
-            .picture {
-              /* Positioning */
-              /* Display and Box model */
-              align-self: start;
-              background-color: $white-10;
-              border-color: $white-20;
-              border-style: solid;
-              border-width: $border-width;
-              box-sizing: content-box;
-              grid-area: picture;
-              height: auto;
-              line-height: 0;
-              width: 100%;
-              /* Typography */
-              /* Other */
-
-              @media screen and (min-width: $medium-devices) {
-                /* Positioning */
-                /* Display and Box model */
-                max-width: calc(#{$column-width} * 2 + #{$gap-width});
-                /* Typography */
-                /* Other */
-              }
-
-              img.image {
-                /* Positioning */
-                /* Display and Box model */
-                object-fit: contain;
-                height: auto;
-                width: 100%;
-                /* Typography */
-                /* Other */
-                filter: $grayscale;
-              }
-            }
-
-            figcaption.caption {
-              /* Positioning */
-              /* Display and Box model */
-              grid-area: caption;
-              height: auto;
-              min-height: calc(2.369rem * 1.3) + calc(1.777rem * 1.3);
-              /* Typography */
-              /* Other */
-
-              .title {
-
-                h3,h4 {
-                  /* Positioning */
-                  /* Display and Box model */
-                  margin: 0;
-                  /* Typography */
-                  /* Other */
-                }
-              }
-            }
-
-            .text {
-              /* Positioning */
-              /* Display and Box model */
-              grid-area: text;
-              height: auto;
-              /* Typography */
-              /* Other */
-            }
-          }
-        }
-
-        &.projects {
-          /* Positioning */
-          /* Display and Box model */
-          display: grid;
-          grid-template-columns: 1fr;
-          gap: $gap-width;
-          width: auto;
-          /* Typography */
-          /* Other */
-
-          @media screen and (min-width: $medium-devices) {
-            /* Positioning */
-            /* Display and Box model */
-            grid-template-columns:
-              repeat(
-                auto-fill,
-                minmax(
-                  calc(#{$column-width} * 3 + calc(#{$gap-width} * 2)),
-                  1fr
-                )
-              );
-            /* Typography */
-            /* Other */
-          }
-
-          figure.project {
-            /* Positioning */
-            /* Display and Box model */
-            align-items: center;
-            border-color: $black-20;
-            border-style: solid;
-            border-width: $border-width;
-            box-sizing: content-box;
-            display: grid;
-            grid-template-areas:
-              "picture"
-              "caption"
-              "text"
-              "more";
-            grid-template-columns:
-              [first] 1fr;
-            grid-template-rows:
-              [picture] 18.75rem
-              [caption] auto
-              [text] 1fr
-              [more] auto;
-            margin: 0;
-            /* Typography */
-            /* Other */
-            background-color: $white-50;
-
-            .picture {
-              /* Positioning */
-              /* Display and Box model */
-              grid-area: picture;
-              line-height: 0;
-              /* Typography */
-              /* Other */
-
-              img.image {
-                /* Positioning */
-                /* Display and Box model */
-                height: 18.75rem;
-                object-fit: cover;
-                width: 100%;
-                /* Typography */
-                /* Other */
-                filter: $grayscale;
-              }
-            }
-
-            figcaption.caption {
-              /* Positioning */
-              /* Display and Box model */
-              border-color: $black-20;
-              border-style: solid;
-              border-width: $border-width 0;
-              grid-area: caption;
-              min-height: calc(#{$gap-width} * 2 + calc(2.369rem * 1.3) + calc(1.777rem * 1.3) + #{$border-width}); /* padding (top + bottom) + h4 line height + h3 line height + border (bottom) */
-              padding: $gap-width;
-              /* Typography */
-              /* Other */
-
-              .title {
-
-                h3,h4 {
-                  /* Positioning */
-                  /* Display and Box model */
-                  margin: 0;
-                  /* Typography */
-                  /* Other */
-                }
-              }
-            }
-
-            .text {
-              /* Positioning */
-              /* Display and Box model */
-              grid-area: text;
-              height: 100%;
-              padding: $gap-width;
-              /* Typography */
-              /* Other */
-
-              p {
-
-                &:last-child {
-                  /* Positioning */
-                  /* Display and Box model */
-                  margin-bottom: 0;
-                  /* Typography */
-                  /* Other */
-                }
-              }
-            }
-
-            .more {
-              /* Positioning */
-              /* Display and Box model */
-              grid-area: more;
-              padding: 0 $gap-width $gap-width $gap-width;
-              /* Typography */
-              /* Other */
-
-              .link {
-              /* Positioning */
-              /* Display and Box model */
-              border-color: $black-20;
-              border-style: solid;
-              border-width: $border-width;
-              padding: calc(#{$gap-width} / 2) calc(#{$gap-width} / 2) 0.5625rem;
-              width: 100%;
-              /* Typography */
-              color: $black-100;
-              font-family: $font-family-monospace;
-              font-size: 0.8125rem;
-              font-weight: 700;
-              text-align: center;
-              text-transform: uppercase;
-              /* Other */
-
-                &:hover {
-                  /* Positioning */
-                  /* Display and Box model */
-                  border-color: $black-100;
-                  border-style: solid;
-                  /* Typography */
-                  color: $black-100;
-                  /* Other */
-                  cursor: pointer;
-                }
-              }
-            }
-          }
-        }
-
-        &.contacts {
-          /* Positioning */
-          /* Display and Box model */
-          justify-content: center;
-          display: grid;
-          gap: $gap-width;
-          grid-template-columns: 1fr;
-          width: 100%;
-          /* Typography */
-          font-style: normal;
-          /* Other */
-
-          @media screen and (min-width: $medium-devices) {
-            /* Positioning */
-            /* Display and Box model */
-            grid-template-columns:
-              repeat(
-                auto-fit,
-                minmax(
-                  auto,
-                  calc(#{$column-width} * 3 + calc(#{$gap-width} * 2))
-                )
-              );
-            /* Typography */
-            /* Other */
-          }
-
-          figure.contact {
-            /* Positioning */
-            /* Display and Box model */
-            background-color: $black-10;
-            border-color: $black-20;
-            border-style: solid;
-            border-width: $border-width;
-            display: grid;
-            grid-template-areas:
-              "icon"
-              "caption"
-              "text";
-            grid-template-columns:
-              [first] auto;
-            grid-template-rows:
-              [icon] auto
-              [caption] auto
-              [text] 1fr;
-            padding: $gap-width;
-            /* Typography */
-            /* Other */
-
-            .icon {
-              /* Positioning */
-              /* Display and Box model */
-              align-items: center;
-              border-bottom: $border-width solid $black-20;
-              box-sizing: border-box;
-              display: flex;
-              flex-direction: column;
-              grid-area: icon;
-              justify-content: center;
-              justify-self: center;
-              margin-bottom: $gap-width;
-              padding-bottom: $gap-width;
-              width: 2.625rem;
-              /* Typography */
-              color: $black-50;
-              font-size: 2.625rem;
-              line-height: 0;
-              /* Other */
-
-              i {
-                /* Positioning */
-                /* Display and Box model */
-                width: auto;
-                /* Typography */
-                /* Other */
-              }
-            }
-
-            figcaption.caption {
-              /* Positioning */
-              /* Display and Box model */
-              grid-area: caption;
-              /* Typography */
-              /* Other */
-
-              .title {
-
-                h5 {
-                  /* Positioning */
-                  /* Display and Box model */
-                  /* Typography */
-                  margin-top: 0;
-                  text-align: center;
-                  /* Other */
-                }
-              }
-            }
-
-            .text {
-              /* Positioning */
-              /* Display and Box model */
-              grid-area: text;
-              /* Typography */
-              /* Other */
-
-              .link {
-                /* Positioning */
-                /* Display and Box model */
-                border: $border-width solid $black-20;
-                display: block;
-                padding: calc(#{$gap-width} / 2) calc(#{$gap-width} / 2) 0.5625rem;
-                width: 100%;
-                /* Typography */
-                color: $black-100;
-                text-decoration: none;
-                /* Other */
-
-                p {
-                  /* Positioning */
-                  /* Display and Box model */
-                  margin-bottom: 0;
-                  /* Typography */
-                  color: $black-100;
-                  font-family: $font-family-monospace;
-                  font-size: 0.8125rem;
-                  font-weight: 700;
-                  text-align: center;
-                  text-transform: uppercase;
-                  /* Other */
-                }
-
-                &:hover {
-                  /* Positioning */
-                  /* Display and Box model */
-                  border-color: $black-100;
-                  border-style: solid;
-                  /* Typography */
-                  color: $black-100;
-                  /* Other */
-                  cursor: pointer;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-
-    section.footer {
-
-      a.link {
-        /* Positioning */
-        /* Display and Box model */
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        height: $header-height;
-        justify-content: center;
-        /* Typography */
-        /* Other */
-
-        &:hover {
-          .icon {
-            .image {
-              /* Positioning */
-              /* Display and Box model */
-              opacity: 1;
-              /* Typography */
-              /* Other */
-            }
-          }
-        }
-
-        .icon {
-          /* Positioning */
-          /* Display and Box model */
-          align-items: center;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          width: 3.875rem;
-          height: 3.875rem;
-          /* Typography */
-          /* Other */
-
-          img.image {
-            /* Positioning */
-            /* Display and Box model */
-            width: 2rem;
-            opacity: 0.3;
-            /* Typography */
-            /* Other */
-          }
-        }
-      }
-    }
   }
 
   #hero {
@@ -2562,7 +2680,6 @@ html {
         }
       }
     }
-
 
     &.bottom {
       /* Positioning */
