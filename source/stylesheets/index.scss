@@ -133,6 +133,23 @@ html {
     color: $black-70;
     /* Other */
 
+    a {
+      /* Positioning */
+      /* Display and Box model */
+      /* Typography */
+      color: $black-70;
+      /* Other */
+
+      &:hover {
+        /* Positioning */
+        /* Display and Box model */
+        /* Typography */
+        color: $black-100;
+        /* Other */
+        cursor: pointer;
+      }
+    }
+
     p {
       /* Positioning */
       /* Display and Box model */
@@ -2305,23 +2322,6 @@ html {
             );
           /* Typography */
           /* Other */
-        }
-
-        a.link {
-          /* Positioning */
-          /* Display and Box model */
-          /* Typography */
-          color: $white-50;
-          /* Other */
-
-          &:hover {
-            /* Positioning */
-            /* Display and Box model */
-            /* Typography */
-            color: $white-100;
-            /* Other */
-            cursor: pointer;
-          }
         }
 
         ul.list {
