@@ -100,6 +100,26 @@ html {
   /* Other */
   scroll-behavior: smooth;
   scroll-padding-top: $header-height;
+
+  /* System theme color changes */
+  @media (prefers-color-scheme: no-preference) {
+    body {
+      background: $white-100;
+      color: $black-100;
+    }
+  }
+  @media (prefers-color-scheme: light) {
+    body {
+      background: $white-100;
+      color: $black-100;
+    }
+  }
+  @media (prefers-color-scheme: dark) {
+    body {
+      background: $black-100;
+      color: $white-100;
+    }
+  }
 }
 
 /*=====================*/
@@ -125,7 +145,6 @@ html {
   body {
     /* Positioning */
     /* Display and Box model */
-    background-color: $white-100;
     /* Typography */
     font-family: $font-family-sans-serif;
     font-weight: 400;
